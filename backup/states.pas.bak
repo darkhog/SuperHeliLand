@@ -96,7 +96,6 @@ var
 
 constructor TGameState.Create;
 var bmp:AL_BITMAPptr;
-  ol:TObjectList
 begin
   inherited Create;
 end;

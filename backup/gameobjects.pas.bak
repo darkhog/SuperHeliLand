@@ -8,6 +8,9 @@ uses
   Classes, SysUtils, Sprites,contnrs;
 type
   TObjectMode = (omAnim,omSprite);
+
+  { TGameObject }
+
   TGameObject = class
     public
       Animations:TAnimatedSpriteList;
@@ -19,7 +22,7 @@ type
       procedure MoveTo(_x,_y:Integer);virtual;
       procedure MoveBy(_x,_y:Integer);virtual;
       procedure Update();virtual;
-      procedure Draw;
+      procedure Draw;virtual;
       constructor Create(mode:TObjectMode);
       constructor Create(DefaultAnimation:TAnimatedSprite);
       constructor Create(DefaultSprite:TSprite);
@@ -28,6 +31,50 @@ type
   end;
 
 implementation
+
+{ TGameObject }
+
+procedure TGameObject.MoveTo(_x, _y: Integer);
+begin
+
+end;
+
+procedure TGameObject.MoveBy(_x, _y: Integer);
+begin
+
+end;
+
+procedure TGameObject.Update;
+begin
+
+end;
+
+procedure TGameObject.Draw;
+begin
+
+end;
+
+constructor TGameObject.Create(mode: TObjectMode);
+begin
+  ObjectMode:=mode;
+  if mode=omAnim then Animations:=TAnimatedSpriteList.create;
+  if mode=omSprite then Sprites:=TSpriteList.create;
+end;
+
+constructor TGameObject.Create(DefaultAnimation: TAnimatedSprite);
+begin
+
+end;
+
+constructor TGameObject.Create(DefaultSprite: TSprite);
+begin
+
+end;
+
+destructor TGameObject.Destroy;
+begin
+  inherited Destroy;
+end;
 
 end.
 

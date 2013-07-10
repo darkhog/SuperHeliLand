@@ -41,7 +41,7 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <Units Count="11">
+    <Units Count="12">
       <Unit0>
         <Filename Value="alletest.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -97,6 +97,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="GameObjects"/>
       </Unit10>
+      <Unit11>
+        <Filename Value="gamestateunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GameStateUnit"/>
+      </Unit11>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

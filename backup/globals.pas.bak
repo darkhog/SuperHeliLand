@@ -5,7 +5,7 @@ unit Globals;
 interface
 
 uses
-  Classes, SysUtils,states,allegro;
+  Classes, SysUtils,states,allegro, al_ogg;
 type
   TOptions = record
     sfxvolume,musicvolume:byte;

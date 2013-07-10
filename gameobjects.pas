@@ -22,7 +22,7 @@ type
       procedure MoveTo(_x,_y:Integer);virtual;
       procedure MoveBy(_x,_y:Integer);virtual;
       procedure Update();virtual;
-      procedure Draw;
+      procedure Draw;virtual;
       constructor Create(mode:TObjectMode);
       constructor Create(DefaultAnimation:TAnimatedSprite);
       constructor Create(DefaultSprite:TSprite);
@@ -56,22 +56,29 @@ end;
 
 constructor TGameObject.Create(mode: TObjectMode);
 begin
-
+  inherited Create;
+  ObjectMode:=mode;
+  if mode=omAnim then Animations:=TAnimatedSpriteList.create;
+  if mode=omSprite then Sprites:=TSpriteList.create;
 end;
 
 constructor TGameObject.Create(DefaultAnimation: TAnimatedSprite);
 begin
-
+  Create(omAnim);
+  Animations.Add(DefaultAnimation);
 end;
 
 constructor TGameObject.Create(DefaultSprite: TSprite);
 begin
-
+  Create(omSprite);
+  Sprites.Add(DefaultSprite);
 end;
 
 destructor TGameObject.Destroy;
 begin
   inherited Destroy;
+  Animations.Free;
+  Sprites.Free;
 end;
 
 end.

@@ -8,7 +8,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Classes, allegro, sprites, PerlinNoiseUnit, WorldGen, boolUtils,
-  Tilesets, ChunkUtils, Globals, states, GameObjects;
+  Tilesets, ChunkUtils, Globals, states, GameObjects, GameStateUnit;
 var lasted,chunklasted,x,y,chunkx:Integer;
 
     pause:boolean;
