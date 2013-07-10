@@ -168,7 +168,7 @@ procedure TAnimatedSpriteList.Notify(Ptr: Pointer; Action: TListNotification);
 begin
   if FFreeObjects then
     if (Action=lnDeleted) then
-      TSprite(Ptr).Free;
+      TAnimatedSprite(Ptr).Free;
   inherited Notify(Ptr,Action);
 end;
 

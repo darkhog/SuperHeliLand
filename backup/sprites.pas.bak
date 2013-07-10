@@ -48,6 +48,7 @@ public
   destructor Destroy;override;
   procedure Update;
   procedure UpdateFrame;
+  procedure Reset;
 end;
 
 { TSpriteList }
@@ -300,6 +301,7 @@ begin
   atStop:     begin
                 if ((_CurrentFrame>=FrameCount)) then
                 begin
+                  direction:=1; //making sure we get right direction if we switch over from atPingPong;
                   _CurrentFrame:=FrameCount-1;
                 end
               end;
@@ -323,6 +325,12 @@ al_blit(AnimationSpritesheet,SpriteBitmap,_x,0,0,0,self.FrameWidth,self.Animatio
 al_blit(AnimationSpritesheetMask,MaskBitmap,_x,0,0,0,self.FrameWidth,self.AnimationSpritesheetMask^.h);
 //updating "real" (i.e. scaled) collision mask, so things would collide properly
 self.UpdateMask;
+end;
+
+procedure TAnimatedSprite.Reset;
+begin
+  _CurrentFrame:=0;
+  _NeedUpdate:=true;
 end;
 
 { TSprite }

@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="18">
+    <Units Count="21">
       <Unit0>
         <Filename Value="alletest.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -33,8 +33,8 @@
         <UnitName Value="Sprites"/>
         <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="66" Y="4"/>
+        <TopLine Value="159"/>
+        <CursorPos X="16" Y="171"/>
         <UsageCount Value="154"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -116,65 +116,63 @@
         <Loaded Value="True"/>
       </Unit9>
       <Unit10>
+        <Filename Value="gameobjects.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GameObjects"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="37"/>
+        <CursorPos X="3" Y="39"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
         <Filename Value="mvnoise.pas"/>
         <UnitName Value="mvNoise"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
         <UsageCount Value="24"/>
-      </Unit10>
-      <Unit11>
+      </Unit11>
+      <Unit12>
         <Filename Value="C:\compilerstuff\allegro.pas\lib\allegro.pas"/>
         <UnitName Value="allegro"/>
         <WindowIndex Value="0"/>
         <TopLine Value="4712"/>
         <CursorPos X="56" Y="4743"/>
         <UsageCount Value="34"/>
-      </Unit11>
-      <Unit12>
+      </Unit12>
+      <Unit13>
         <Filename Value="C:\compilerstuff\allegro.pas\lib\alvtable.pas"/>
         <UnitName Value="alvtable"/>
         <WindowIndex Value="0"/>
         <TopLine Value="66"/>
         <CursorPos X="15" Y="81"/>
         <UsageCount Value="11"/>
-      </Unit12>
-      <Unit13>
+      </Unit13>
+      <Unit14>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\inc\objpash.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="184"/>
         <CursorPos X="21" Y="201"/>
         <UsageCount Value="5"/>
-      </Unit13>
-      <Unit14>
+      </Unit14>
+      <Unit15>
         <Filename Value="C:\compilerstuff\allegro.pas\lib\alfixed.pas"/>
         <UnitName Value="alfixed"/>
         <WindowIndex Value="0"/>
         <TopLine Value="200"/>
         <CursorPos X="29" Y="217"/>
         <UsageCount Value="5"/>
-      </Unit14>
-      <Unit15>
-        <Filename Value="C:\lazarus\fpc\2.6.0\source\packages\fcl-base\src\contnrs.pp"/>
-        <UnitName Value="contnrs"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="11"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="854"/>
-        <CursorPos X="37" Y="883"/>
-        <UsageCount Value="13"/>
-        <Loaded Value="True"/>
       </Unit15>
       <Unit16>
-        <Filename Value="gameobjects.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="GameObjects"/>
-        <EditorIndex Value="10"/>
+        <Filename Value="C:\lazarus\fpc\2.6.0\source\packages\fcl-base\src\contnrs.pp"/>
+        <UnitName Value="contnrs"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="25" Y="23"/>
-        <UsageCount Value="24"/>
-        <Loaded Value="True"/>
+        <TopLine Value="55"/>
+        <CursorPos X="14" Y="89"/>
+        <UsageCount Value="13"/>
       </Unit16>
       <Unit17>
         <Filename Value="..\simplecoder\mnfrm.pas"/>
@@ -184,79 +182,104 @@
         <CursorPos X="1" Y="1"/>
         <UsageCount Value="10"/>
       </Unit17>
+      <Unit18>
+        <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\classes\classesh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="270"/>
+        <CursorPos X="15" Y="287"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\classes\lists.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="641"/>
+        <CursorPos X="3" Y="646"/>
+        <UsageCount Value="10"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\sysutils\sysutilh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="268"/>
+        <CursorPos X="13" Y="285"/>
+        <UsageCount Value="10"/>
+      </Unit20>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="17" HistoryIndex="16">
+    <JumpHistory Count="18" HistoryIndex="17">
       <Position1>
         <Filename Value="states.pas"/>
-        <Caret Line="50" Column="19" TopLine="31"/>
+        <Caret Line="22" Column="31" TopLine="1"/>
       </Position1>
       <Position2>
         <Filename Value="states.pas"/>
-        <Caret Line="22" Column="31" TopLine="1"/>
+        <Caret Line="412" Column="1" TopLine="412"/>
       </Position2>
       <Position3>
         <Filename Value="states.pas"/>
-        <Caret Line="412" Column="1" TopLine="412"/>
+        <Caret Line="69" Column="7" TopLine="35"/>
       </Position3>
       <Position4>
         <Filename Value="states.pas"/>
-        <Caret Line="69" Column="7" TopLine="35"/>
+        <Caret Line="49" Column="10" TopLine="49"/>
       </Position4>
       <Position5>
         <Filename Value="states.pas"/>
-        <Caret Line="49" Column="10" TopLine="49"/>
+        <Caret Line="417" Column="44" TopLine="393"/>
       </Position5>
       <Position6>
         <Filename Value="states.pas"/>
-        <Caret Line="417" Column="44" TopLine="393"/>
+        <Caret Line="82" Column="8" TopLine="51"/>
       </Position6>
       <Position7>
         <Filename Value="states.pas"/>
-        <Caret Line="82" Column="8" TopLine="51"/>
+        <Caret Line="75" Column="22" TopLine="75"/>
       </Position7>
       <Position8>
         <Filename Value="states.pas"/>
-        <Caret Line="75" Column="22" TopLine="75"/>
+        <Caret Line="99" Column="17" TopLine="77"/>
       </Position8>
       <Position9>
-        <Filename Value="states.pas"/>
-        <Caret Line="99" Column="17" TopLine="77"/>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="59" Column="16" TopLine="45"/>
       </Position9>
       <Position10>
-        <Filename Value="C:\lazarus\fpc\2.6.0\source\packages\fcl-base\src\contnrs.pp"/>
-        <Caret Line="819" Column="3" TopLine="816"/>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="83" Column="10" TopLine="60"/>
       </Position10>
       <Position11>
-        <Filename Value="C:\lazarus\fpc\2.6.0\source\packages\fcl-base\src\contnrs.pp"/>
-        <Caret Line="816" Column="24" TopLine="799"/>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="93" Column="44" TopLine="70"/>
       </Position11>
       <Position12>
         <Filename Value="sprites.pas"/>
-        <Caret Line="59" Column="16" TopLine="45"/>
+        <Caret Line="176" Column="20" TopLine="159"/>
       </Position12>
       <Position13>
-        <Filename Value="sprites.pas"/>
-        <Caret Line="83" Column="10" TopLine="60"/>
+        <Filename Value="states.pas"/>
+        <Caret Line="99" Column="17" TopLine="77"/>
       </Position13>
       <Position14>
         <Filename Value="sprites.pas"/>
-        <Caret Line="93" Column="44" TopLine="70"/>
+        <Caret Line="51" Column="18" TopLine="26"/>
       </Position14>
       <Position15>
         <Filename Value="sprites.pas"/>
-        <Caret Line="176" Column="20" TopLine="159"/>
+        <Caret Line="67" Column="22" TopLine="67"/>
       </Position15>
       <Position16>
-        <Filename Value="states.pas"/>
-        <Caret Line="99" Column="17" TopLine="77"/>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="67" Column="22" TopLine="67"/>
       </Position16>
       <Position17>
         <Filename Value="sprites.pas"/>
-        <Caret Line="51" Column="18" TopLine="26"/>
+        <Caret Line="144" Column="3" TopLine="142"/>
       </Position17>
+      <Position18>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="27" Column="23" TopLine="1"/>
+      </Position18>
     </JumpHistory>
   </ProjectSession>
   <Debugging>
