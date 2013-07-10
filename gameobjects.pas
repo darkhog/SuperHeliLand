@@ -92,7 +92,23 @@ end;
 
 procedure TGameObject.Update;
 begin
-
+  case ObjectMode of
+    omAnim:   begin
+                if Animations.Items[CurrentAnim]<>nil then
+                  begin
+                    Animations.Items[CurrentAnim].Update;
+                    Animations.Items[CurrentAnim].x:=x;
+                    Animations.Items[CurrentAnim].y:=y;
+                  end;
+              end;
+    omSprite: begin
+                if Sprites.Items[CurrentSprite]<>nil then
+                  begin
+                    Sprites.Items[CurrentSprite].x:=x;
+                    Sprites.Items[CurrentSprite].y:=y;
+                  end;
+              end;
+  end;
 end;
 
 procedure TGameObject.Draw(Bitmap: AL_BITMAPptr);
@@ -100,7 +116,10 @@ begin
   case ObjectMode of
     omAnim:   begin
                 if Animations.Items[CurrentAnim]<>nil then
-                  Animations.Items[CurrentAnim].Draw(Bitmap);
+                  begin
+                    if Animations.Items[CurrentAnim].NeedUpdate then Animations.Items[CurrentAnim].UpdateFrame;
+                    Animations.Items[CurrentAnim].Draw(Bitmap);
+                  end;
               end;
     omSprite: begin
                 if Sprites.Items[CurrentSprite]<>nil then
