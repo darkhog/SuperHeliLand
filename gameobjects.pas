@@ -38,12 +38,14 @@ implementation
 
 procedure TGameObject.MoveTo(_x, _y: Integer);
 begin
-
+  x:=_x;
+  y:=_y;
 end;
 
 procedure TGameObject.MoveBy(_x, _y: Integer);
 begin
-
+  x:=x+_x;
+  y:=x+_y;
 end;
 
 function TGameObject.isColliding(GO: TGameObject): Boolean;
@@ -54,20 +56,20 @@ begin
                 if Animations.Items[CurrentAnim]<>nil then
                   if GO.ObjectMode=omAnim then
                   begin
-                    Result:=((GO.Animations.Items[CurrentAnim]<>nil) and (Animations.Items[CurrentAnim].IsColliding(GO.Animations.Items[GO.CurrentAnim])));
+                    Result:=((GO.Animations.Items[GO.CurrentAnim]<>nil) and (Animations.Items[CurrentAnim].IsColliding(GO.Animations.Items[GO.CurrentAnim])));
                   end else
                   begin
-                    Result:=((GO.Animations.Items[CurrentAnim]<>nil) and (Animations.Items[CurrentAnim].IsColliding(GO.Sprites.Items[GO.CurrentSprite])));
+                    Result:=((GO.Sprites.Items[GO.CurrentSprite]<>nil) and (Animations.Items[CurrentAnim].IsColliding(GO.Sprites.Items[GO.CurrentSprite])));
                   end;
               end;
     omSprite: begin
                 if Sprites.Items[CurrentSprite]<>nil then
                 if GO.ObjectMode=omAnim then
                 begin
-                  Result:=((GO.Animations.Items[CurrentAnim]<>nil) and (Sprites.Items[CurrentSprite].IsColliding(GO.Animations.Items[GO.CurrentAnim])));
+                  Result:=((GO.Animations.Items[GO.CurrentAnim]<>nil) and (Sprites.Items[CurrentSprite].IsColliding(GO.Animations.Items[GO.CurrentAnim])));
                 end else
                 begin
-                  Result:=((GO.Animations.Items[CurrentAnim]<>nil) and (Sprites.Items[CurrentSprite].IsColliding(GO.Sprites.Items[GO.CurrentSprite])));
+                  Result:=((GO.Sprites.Items[GO.CurrentSprite]<>nil) and (Sprites.Items[CurrentSprite].IsColliding(GO.Sprites.Items[GO.CurrentSprite])));
                 end;
               end;
   end;
@@ -95,7 +97,16 @@ end;
 
 procedure TGameObject.Draw(Bitmap: AL_BITMAPptr);
 begin
-
+  case ObjectMode of
+    omAnim:   begin
+                if Animations.Items[CurrentAnim]<>nil then
+                  Animations.Items[CurrentAnim].Draw(Bitmap);
+              end;
+    omSprite: begin
+                if Sprites.Items[CurrentSprite]<>nil then
+                  Sprites.Items[CurrentSprite].Draw(Bitmap);
+              end;
+  end;
 end;
 
 constructor TGameObject.Create(mode: TObjectMode);
