@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="17">
+      <Unit0>
+        <Filename Value="alletest.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="alletest"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="18" Y="178"/>
+        <UsageCount Value="157"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="masked_collision.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="masked_collision"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="11"/>
+        <UsageCount Value="154"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="sprites.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Sprites"/>
+        <EditorIndex Value="9"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="66" Y="4"/>
+        <UsageCount Value="154"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="perlinnoiseunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PerlinNoiseUnit"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="29" Y="32"/>
+        <UsageCount Value="145"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="worldgen.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="WorldGen"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="33"/>
+        <CursorPos X="17" Y="56"/>
+        <UsageCount Value="128"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="tilesets.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Tilesets"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="46"/>
+        <CursorPos X="1" Y="65"/>
+        <UsageCount Value="126"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="boolutils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="boolUtils"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="11" Y="1"/>
+        <UsageCount Value="124"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="chunkutils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ChunkUtils"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="117" Y="258"/>
+        <UsageCount Value="122"/>
+        <Loaded Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="globals.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Globals"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2"/>
+        <CursorPos X="43" Y="8"/>
+        <UsageCount Value="86"/>
+        <Loaded Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="states.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="States"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="83"/>
+        <CursorPos X="22" Y="98"/>
+        <UsageCount Value="83"/>
+        <Loaded Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="mvnoise.pas"/>
+        <UnitName Value="mvNoise"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="24"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\compilerstuff\allegro.pas\lib\allegro.pas"/>
+        <UnitName Value="allegro"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="4712"/>
+        <CursorPos X="56" Y="4743"/>
+        <UsageCount Value="34"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\compilerstuff\allegro.pas\lib\alvtable.pas"/>
+        <UnitName Value="alvtable"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="66"/>
+        <CursorPos X="15" Y="81"/>
+        <UsageCount Value="11"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\inc\objpash.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="184"/>
+        <CursorPos X="21" Y="201"/>
+        <UsageCount Value="5"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\compilerstuff\allegro.pas\lib\alfixed.pas"/>
+        <UnitName Value="alfixed"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="200"/>
+        <CursorPos X="29" Y="217"/>
+        <UsageCount Value="5"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\lazarus\fpc\2.6.0\source\packages\fcl-base\src\contnrs.pp"/>
+        <UnitName Value="contnrs"/>
+        <EditorIndex Value="11"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="854"/>
+        <CursorPos X="37" Y="883"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="gameobjects.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GameObjects"/>
+        <EditorIndex Value="10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="25" Y="23"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit16>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="17" HistoryIndex="16">
+      <Position1>
+        <Filename Value="states.pas"/>
+        <Caret Line="50" Column="19" TopLine="31"/>
+      </Position1>
+      <Position2>
+        <Filename Value="states.pas"/>
+        <Caret Line="22" Column="31" TopLine="1"/>
+      </Position2>
+      <Position3>
+        <Filename Value="states.pas"/>
+        <Caret Line="412" Column="1" TopLine="412"/>
+      </Position3>
+      <Position4>
+        <Filename Value="states.pas"/>
+        <Caret Line="69" Column="7" TopLine="35"/>
+      </Position4>
+      <Position5>
+        <Filename Value="states.pas"/>
+        <Caret Line="49" Column="10" TopLine="49"/>
+      </Position5>
+      <Position6>
+        <Filename Value="states.pas"/>
+        <Caret Line="417" Column="44" TopLine="393"/>
+      </Position6>
+      <Position7>
+        <Filename Value="states.pas"/>
+        <Caret Line="82" Column="8" TopLine="51"/>
+      </Position7>
+      <Position8>
+        <Filename Value="states.pas"/>
+        <Caret Line="75" Column="22" TopLine="75"/>
+      </Position8>
+      <Position9>
+        <Filename Value="states.pas"/>
+        <Caret Line="99" Column="17" TopLine="77"/>
+      </Position9>
+      <Position10>
+        <Filename Value="C:\lazarus\fpc\2.6.0\source\packages\fcl-base\src\contnrs.pp"/>
+        <Caret Line="819" Column="3" TopLine="816"/>
+      </Position10>
+      <Position11>
+        <Filename Value="C:\lazarus\fpc\2.6.0\source\packages\fcl-base\src\contnrs.pp"/>
+        <Caret Line="816" Column="24" TopLine="799"/>
+      </Position11>
+      <Position12>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="59" Column="16" TopLine="45"/>
+      </Position12>
+      <Position13>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="83" Column="10" TopLine="60"/>
+      </Position13>
+      <Position14>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="93" Column="44" TopLine="70"/>
+      </Position14>
+      <Position15>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="176" Column="20" TopLine="159"/>
+      </Position15>
+      <Position16>
+        <Filename Value="states.pas"/>
+        <Caret Line="99" Column="17" TopLine="77"/>
+      </Position16>
+      <Position17>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="51" Column="18" TopLine="26"/>
+      </Position17>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="Chunk"/>
+      </Item1>
+    </Watches>
+  </Debugging>
+</CONFIG>

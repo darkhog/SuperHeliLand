@@ -1,0 +1,421 @@
+unit Sprites;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, allegro;
+TYPE
+
+{ TSprite }
+
+TSprite = class
+public
+  SpriteBitmap,MaskBitmap,ActualMaskBitmap: AL_BITMAPptr;
+  x,y,vx,vy,ScaleFactor:Integer;  //in some cases you may want to affect x/y directly so x/y are public.
+  magentatransparent:Boolean;
+  constructor Create(sprite,mask:AL_BITMAPptr);
+  Destructor Destroy();override;
+  procedure Update;
+  procedure UpdateMask;
+  procedure Draw(bitmap:AL_BITMAPptr);
+  procedure DrawMask(bitmap:AL_BITMAPptr);
+  function IsColliding(other:TSprite):Boolean;
+  procedure Put(bitmap:AL_BITMAPptr; _x,_y:Integer);
+private
+
+end;
+
+{ TAnimatedSprite }
+TAnimationType = (atLoop,atPingPong,atStop);
+TAnimatedSprite = class(TSprite)
+private
+  direction:Shortint;
+  AnimationSpritesheet :AL_BITMAPptr;
+  AnimationSpritesheetMask :AL_BITMAPptr;
+  _NeedUpdate:Boolean;
+  _CurrentFrame,framecounter:Integer;
+public
+  AnimationType:TAnimationType;
+  DelayBetweenFrames:Integer; //in frames, 1s=60 frames.
+  FrameCount:Integer;
+  FrameWidth:Integer;
+  property CurrentFrame:Integer read _CurrentFrame;
+  property NeedUpdate: Boolean read _NeedUpdate;
+  constructor Create(spritesheet,spritesheetmask:AL_BITMAPptr; framenum:integer; animtype:TAnimationType);
+  constructor Create(spritesheet,spritesheetmask:AL_BITMAPptr; framenum:integer);
+  destructor Destroy;override;
+  procedure Update;
+  procedure UpdateFrame;
+  procedure Reset;
+end;
+
+{ TSpriteList }
+
+TSpriteList = class(TList)
+private
+    ffreeobjects : boolean;
+Protected
+  Procedure Notify(Ptr: Pointer; Action: TListNotification); override;
+  function GetItem(Index: Integer): TSprite;
+  Procedure SetItem(Index: Integer; AObject: TSprite);
+public
+  constructor create;
+  constructor create(freeobjects : boolean);
+  function Add(AObject: TSprite): Integer;
+  function Extract(Item: TSprite): TSprite;
+  function Remove(AObject: TSprite): Integer;
+  function IndexOf(AObject: TSprite): Integer;
+  Procedure Insert(Index: Integer; AObject: TSprite);
+  function First: TSprite;
+  Function Last: TSprite;
+  property OwnsObjects: Boolean read FFreeObjects write FFreeObjects;
+  property Items[Index: Integer]: TSprite read GetItem write SetItem; default;
+end;
+TAnimatedSpriteList = class(TList)
+private
+    ffreeobjects : boolean;
+Protected
+  Procedure Notify(Ptr: Pointer; Action: TListNotification); override;
+  function GetItem(Index: Integer): TAnimatedSprite;
+  Procedure SetItem(Index: Integer; AObject: TAnimatedSprite);
+public
+  constructor create;
+  constructor create(freeobjects : boolean);
+  function Add(AObject: TAnimatedSprite): Integer;
+  function Extract(Item: TAnimatedSprite): TAnimatedSprite;
+  function Remove(AObject: TAnimatedSprite): Integer;
+  function IndexOf(AObject: TAnimatedSprite): Integer;
+  Procedure Insert(Index: Integer; AObject: TAnimatedSprite);
+  function First: TAnimatedSprite;
+  Function Last: TAnimatedSprite;
+  property OwnsObjects: Boolean read FFreeObjects write FFreeObjects;
+  property Items[Index: Integer]: TAnimatedSprite read GetItem write SetItem; default;
+end;
+implementation
+uses masked_collision;
+
+{ TSpriteList }
+
+procedure TSpriteList.Notify(Ptr: Pointer; Action: TListNotification);
+begin
+  if FFreeObjects then
+    if (Action=lnDeleted) then
+      TSprite(Ptr).Free;
+  inherited Notify(Ptr,Action);
+end;
+
+function TSpriteList.GetItem(Index: Integer): TSprite;
+begin
+  Result:=TSprite(Inherited Get(Index));
+end;
+
+procedure TSpriteList.SetItem(Index: Integer; AObject: TSprite);
+begin
+  // Put will take care of deleting old one in Notify.
+  Put(Index,Pointer(AObject));
+end;
+
+constructor TSpriteList.create;
+begin
+  inherited create;
+  ffreeobjects:=true;
+end;
+
+constructor TSpriteList.create(freeobjects: boolean);
+begin
+  inherited create;
+  ffreeobjects:=freeobjects;
+end;
+
+function TSpriteList.Add(AObject: TSprite): Integer;
+begin
+  Result:=Inherited Add(Pointer(AObject));
+end;
+
+function TSpriteList.Extract(Item: TSprite): TSprite;
+begin
+  Result:=TSprite(Inherited Extract(Pointer(Item)));
+end;
+
+function TSpriteList.Remove(AObject: TSprite): Integer;
+begin
+  Result:=Inherited Remove(Pointer(AObject));
+end;
+
+function TSpriteList.IndexOf(AObject: TSprite): Integer;
+begin
+  Result:=Inherited indexOF(Pointer(AObject));
+end;
+
+procedure TSpriteList.Insert(Index: Integer; AObject: TSprite);
+begin
+  Inherited Insert(Index,Pointer(AObject));
+end;
+
+function TSpriteList.First: TSprite;
+begin
+  Result := TSprite(Inherited First);
+end;
+
+function TSpriteList.Last: TSprite;
+begin
+  Result := TSprite(Inherited Last);
+end;
+//-----
+procedure TAnimatedSpriteList.Notify(Ptr: Pointer; Action: TListNotification);
+begin
+  if FFreeObjects then
+    if (Action=lnDeleted) then
+      TSprite(Ptr).Free;
+  inherited Notify(Ptr,Action);
+end;
+
+function TAnimatedSpriteList.GetItem(Index: Integer): TAnimatedSprite;
+begin
+  Result:=TAnimatedSprite(Inherited Get(Index));
+end;
+
+procedure TAnimatedSpriteList.SetItem(Index: Integer; AObject: TAnimatedSprite);
+begin
+  // Put will take care of deleting old one in Notify.
+  Put(Index,Pointer(AObject));
+end;
+
+constructor TAnimatedSpriteList.create;
+begin
+  inherited create;
+  ffreeobjects:=true;
+end;
+
+constructor TAnimatedSpriteList.create(freeobjects: boolean);
+begin
+  inherited create;
+  ffreeobjects:=freeobjects;
+end;
+
+function TAnimatedSpriteList.Add(AObject: TAnimatedSprite): Integer;
+begin
+  Result:=Inherited Add(Pointer(AObject));
+end;
+
+function TAnimatedSpriteList.Extract(Item: TAnimatedSprite): TAnimatedSprite;
+begin
+  Result:=TAnimatedSprite(Inherited Extract(Pointer(Item)));
+end;
+
+function TAnimatedSpriteList.Remove(AObject: TAnimatedSprite): Integer;
+begin
+  Result:=Inherited Remove(Pointer(AObject));
+end;
+
+function TAnimatedSpriteList.IndexOf(AObject: TAnimatedSprite): Integer;
+begin
+  Result:=Inherited indexOF(Pointer(AObject));
+end;
+
+procedure TAnimatedSpriteList.Insert(Index: Integer; AObject: TAnimatedSprite);
+begin
+  Inherited Insert(Index,Pointer(AObject));
+end;
+
+function TAnimatedSpriteList.First: TAnimatedSprite;
+begin
+  Result := TAnimatedSprite(Inherited First);
+end;
+
+function TAnimatedSpriteList.Last: TAnimatedSprite;
+begin
+  Result := TAnimatedSprite(Inherited Last);
+end;
+{ TAnimatedSprite }
+
+constructor TAnimatedSprite.Create(spritesheet, spritesheetmask: AL_BITMAPptr;
+  framenum: integer; animtype: TAnimationType);
+begin
+  Create(spritesheet,spritesheetmask,framenum);
+  AnimationType:=animtype;
+end;
+
+constructor TAnimatedSprite.Create(spritesheet,spritesheetmask: AL_BITMAPptr; framenum:integer);
+var sprite,mask:AL_BITMAPptr;
+begin
+  FrameCount:=framenum;
+  sprite:=al_create_bitmap(2,2);
+  mask:=al_create_bitmap(2,2);
+  inherited Create(sprite, mask);
+  AnimationSpritesheet:=spritesheet;
+  AnimationSpritesheetMask:=spritesheetmask;
+  direction:=1;
+  _CurrentFrame:=-1;
+end;
+
+destructor TAnimatedSprite.Destroy;
+begin
+  //inherited Destroy;
+  if AnimationSpritesheet<> nil then al_destroy_bitmap(AnimationSpritesheet);
+  if AnimationSpritesheetMask<> nil then al_destroy_bitmap(AnimationSpritesheetMask);
+  inherited;
+end;
+
+procedure TAnimatedSprite.Update;
+begin
+  inherited Update;
+  if _CurrentFrame=-1 then
+    begin
+      _CurrentFrame:=0;
+      framecounter:=1;
+      _NeedUpdate:=true;
+      exit;
+    end;
+  Inc(FrameCounter);
+  if ((framecounter>=DelayBetweenFrames)) then
+    begin
+
+    _CurrentFrame:=_CurrentFrame+direction;
+    framecounter:=1;
+    _NeedUpdate:=true;
+    end;
+  case AnimationType of
+  atLoop:     begin
+                if _CurrentFrame>=FrameCount then
+                  begin
+                    direction:=1; //making sure we get right direction if we switch over from atPingPong;
+                    _CurrentFrame:=0;
+                    _NeedUpdate:=true;
+                  end;
+              end;
+  atPingPong: begin
+                if ((_CurrentFrame>=FrameCount)) then
+                begin
+                  direction:=-1;
+                  _CurrentFrame:=FrameCount-2;
+                end else
+                if  _CurrentFrame<=0 then
+                begin
+                  direction:=1;
+                  _CurrentFrame:=0;
+                end;
+              end;
+  atStop:     begin
+                if ((_CurrentFrame>=FrameCount)) then
+                begin
+                  direction:=1; //making sure we get right direction if we switch over from atPingPong;
+                  _CurrentFrame:=FrameCount-1;
+                end
+              end;
+  end;
+end;
+
+procedure TAnimatedSprite.UpdateFrame;
+var _x:Integer;
+begin
+_NeedUpdate:=false;
+//preventing memory leaks as we will recreate those bitmaps
+if self.SpriteBitmap<>nil then al_destroy_bitmap(self.SpriteBitmap);
+if self.MaskBitmap<>nil then al_destroy_bitmap(self.MaskBitmap);
+//recreating bitmaps
+self.SpriteBitmap:=al_create_bitmap(self.FrameWidth,self.AnimationSpritesheet^.h);
+self.MaskBitmap:=al_create_bitmap(self.FrameWidth,self.AnimationSpritesheetMask^.h);
+//getting x of current frame
+_x:=self.CurrentFrame*FrameWidth;
+//blitting frames onto displayable bitmaps
+al_blit(AnimationSpritesheet,SpriteBitmap,_x,0,0,0,self.FrameWidth,self.AnimationSpritesheet^.h);
+al_blit(AnimationSpritesheetMask,MaskBitmap,_x,0,0,0,self.FrameWidth,self.AnimationSpritesheetMask^.h);
+//updating "real" (i.e. scaled) collision mask, so things would collide properly
+self.UpdateMask;
+end;
+
+procedure TAnimatedSprite.Reset;
+begin
+  _CurrentFrame:=0;
+  _NeedUpdate:=true;
+end;
+
+{ TSprite }
+
+constructor TSprite.Create(sprite, mask: AL_BITMAPptr);
+begin
+  inherited Create;
+  SpriteBitmap:=sprite;
+  MaskBitmap:=mask;
+  ScaleFactor:=1;
+  UpdateMask;
+  vx:=0;
+  vy:=0;
+  x:=0;
+  y:=0;
+end;
+
+destructor TSprite.Destroy;
+begin
+
+  if SpriteBitmap<>MaskBitmap then
+  begin
+    if SpriteBitmap<> nil then begin al_destroy_bitmap(SpriteBitmap); SpriteBitmap:=nil;end;
+    if MaskBitmap<> nil then begin al_destroy_bitmap(MaskBitmap); MaskBitmap:=nil;end;
+  end else
+    if SpriteBitmap<> nil then begin al_destroy_bitmap(SpriteBitmap); SpriteBitmap:=nil;end;
+  if ActualMaskBitmap<> nil then begin al_destroy_bitmap(ActualMaskBitmap); ActualMaskBitmap:=nil;end;
+  inherited;
+end;
+
+procedure TSprite.Update;
+begin
+  self.x:=x+vx;
+  self.y:=y+vy;
+end;
+
+procedure TSprite.UpdateMask;
+begin
+  //this should be called after changing scale factor of sprite, so it would collide properly
+  if ActualMaskBitmap<>nil then al_destroy_bitmap(ActualMaskBitmap); //preventing memory leak
+  if MaskBitmap=nil then exit; //preventing segfault
+  if ScaleFactor=1 then
+  begin
+    ActualMaskBitmap:=al_create_bitmap(MaskBitmap^.w,MaskBitmap^.h);
+    al_blit(MaskBitmap,ActualMaskBitmap,0,0,0,0,MaskBitmap^.w,MaskBitmap^.h);
+  end else
+  begin
+    ActualMaskBitmap:=al_create_bitmap(MaskBitmap^.w*ScaleFactor,MaskBitmap^.h*ScaleFactor);
+    al_stretch_blit(MaskBitmap,ActualMaskBitmap,0,0,MaskBitmap^.w,MaskBitmap^.h,0,0,MaskBitmap^.w*scalefactor,MaskBitmap^.h*scalefactor);
+  end
+end;
+
+
+procedure TSprite.Draw(bitmap: AL_BITMAPptr);
+begin
+  if ((self<>nil) and (bitmap<>nil) and (SpriteBitmap<>nil)) then
+  begin
+    if not magentatransparent then al_stretch_blit(SpriteBitmap,bitmap,0,0,SpriteBitmap^.w,SpriteBitmap^.h,x,y,SpriteBitmap^.w*scalefactor,SpriteBitmap^.h*scalefactor)
+         else al_masked_stretch_blit(SpriteBitmap,bitmap,0,0,SpriteBitmap^.w,SpriteBitmap^.h,x,y,SpriteBitmap^.w*scalefactor,SpriteBitmap^.h*scalefactor);
+  end;
+end;
+
+procedure TSprite.DrawMask(bitmap: AL_BITMAPptr);
+begin
+  if ((bitmap<>nil) and (MaskBitmap<>nil)) then
+    if not magentatransparent then al_stretch_blit(MaskBitmap,bitmap,0,0,MaskBitmap^.w,MaskBitmap^.h,x,y,MaskBitmap^.w*scalefactor,MaskBitmap^.h*scalefactor)
+         else al_masked_stretch_blit(MaskBitmap,bitmap,0,0,MaskBitmap^.w,MaskBitmap^.h,x,y,MaskBitmap^.w*scalefactor,MaskBitmap^.h*scalefactor);
+end;
+
+function TSprite.IsColliding(other: TSprite): Boolean;
+begin
+  Result:=collide(self,other);
+end;
+
+procedure TSprite.Put(bitmap: AL_BITMAPptr; _x, _y: Integer);
+var oldx,oldy:Integer;
+begin
+  Oldx:=x;
+  Oldy:=y;
+  x:=_x;
+  y:=_y;
+  Draw(bitmap);
+  x:=oldx;
+  y:=oldy;
+end;
+
+end.
+

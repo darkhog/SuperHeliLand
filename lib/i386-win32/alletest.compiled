@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\2.6.0\bin\i386-win32\fpc.exe" Date="1092380949"/>
+  <Params Value=" -MObjFPC -Scghi -O3 -OoUNCERTAIN -OoREGVAR -Pi386 -g -gl -vewnhi -l -FiC:\Users\Darkhog\Documents\lazarus\allegrotest\lib\i386-win32 -FuC:\compilerstuff\allegro.pas\lib -FuC:\Users\Darkhog\Documents\lazarus\allegrotest\ -FUC:\Users\Darkhog\Documents\lazarus\allegrotest\lib\i386-win32\ -osuperheliland.exe alletest.lpr"/>
+</CONFIG>

@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+        <AlwaysBuild Value="True"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="Super Heli Land"/>
+      <UseAppBundle Value="False"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+        <UIAccess Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <AutoIncrementBuild Value="True"/>
+      <MinorVersionNr Value="63"/>
+      <BuildNr Value="100"/>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <Units Count="11">
+      <Unit0>
+        <Filename Value="alletest.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="alletest"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="masked_collision.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="masked_collision"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="sprites.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Sprites"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="perlinnoiseunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PerlinNoiseUnit"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="worldgen.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="WorldGen"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="tilesets.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Tilesets"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="boolutils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="boolUtils"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="chunkutils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ChunkUtils"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="globals.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Globals"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="states.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="States"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="gameobjects.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GameObjects"/>
+      </Unit10>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="superheliland"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="C:\compilerstuff\allegro.pas\lib\"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <TargetCPU Value="i386"/>
+      <Optimizations>
+        <VariablesInRegisters Value="True"/>
+        <UncertainOptimizations Value="True"/>
+        <OptimizationLevel Value="3"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Other>
+      <Verbosity>
+        <ShowHintsForUnusedUnitsInMainSrc Value="True"/>
+      </Verbosity>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>
