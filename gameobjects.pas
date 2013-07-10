@@ -5,7 +5,7 @@ unit GameObjects;
 interface
 
 uses
-  Classes, SysUtils, Sprites,contnrs;
+  Classes, SysUtils, Sprites,contnrs,allegro;
 type
   TObjectMode = (omAnim,omSprite);
 
@@ -21,8 +21,10 @@ type
       x,y:Integer;
       procedure MoveTo(_x,_y:Integer);virtual;
       procedure MoveBy(_x,_y:Integer);virtual;
+      function isColliding(GO:TGameObject):Boolean;
+      function isColliding(Sprite:TSprite):Boolean;
       procedure Update();virtual;
-      procedure Draw;virtual;
+      procedure Draw(Bitmap:AL_BITMAPptr);virtual;
       constructor Create(mode:TObjectMode);
       constructor Create(DefaultAnimation:TAnimatedSprite);
       constructor Create(DefaultSprite:TSprite);
@@ -44,12 +46,54 @@ begin
 
 end;
 
+function TGameObject.isColliding(GO: TGameObject): Boolean;
+begin
+  Result:=false;
+  case ObjectMode of
+    omAnim:   begin
+                if Animations.Items[CurrentAnim]<>nil then
+                  if GO.ObjectMode=omAnim then
+                  begin
+                    Result:=((GO.Animations.Items[CurrentAnim]<>nil) and (Animations.Items[CurrentAnim].IsColliding(GO.Animations.Items[GO.CurrentAnim])));
+                  end else
+                  begin
+                    Result:=((GO.Animations.Items[CurrentAnim]<>nil) and (Animations.Items[CurrentAnim].IsColliding(GO.Sprites.Items[GO.CurrentSprite])));
+                  end;
+              end;
+    omSprite: begin
+                if Sprites.Items[CurrentSprite]<>nil then
+                if GO.ObjectMode=omAnim then
+                begin
+                  Result:=((GO.Animations.Items[CurrentAnim]<>nil) and (Sprites.Items[CurrentSprite].IsColliding(GO.Animations.Items[GO.CurrentAnim])));
+                end else
+                begin
+                  Result:=((GO.Animations.Items[CurrentAnim]<>nil) and (Sprites.Items[CurrentSprite].IsColliding(GO.Sprites.Items[GO.CurrentSprite])));
+                end;
+              end;
+  end;
+end;
+
+function TGameObject.isColliding(Sprite: TSprite): Boolean;
+begin
+  Result:=false;
+  case ObjectMode of
+    omAnim:   begin
+                if Animations.Items[CurrentAnim]<>nil then
+                  Result:=Animations.Items[CurrentAnim].IsColliding(Sprite);
+                end;
+    omSprite: begin
+                if Sprites.Items[CurrentSprite]<>nil then
+                  Result:=Sprites.Items[CurrentSprite].IsColliding(Sprite);
+              end;
+  end;
+end;
+
 procedure TGameObject.Update;
 begin
 
 end;
 
-procedure TGameObject.Draw;
+procedure TGameObject.Draw(Bitmap: AL_BITMAPptr);
 begin
 
 end;

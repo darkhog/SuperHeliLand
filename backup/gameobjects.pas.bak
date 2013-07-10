@@ -5,7 +5,7 @@ unit GameObjects;
 interface
 
 uses
-  Classes, SysUtils, Sprites,contnrs;
+  Classes, SysUtils, Sprites,contnrs,allegro;
 type
   TObjectMode = (omAnim,omSprite);
 
@@ -21,8 +21,10 @@ type
       x,y:Integer;
       procedure MoveTo(_x,_y:Integer);virtual;
       procedure MoveBy(_x,_y:Integer);virtual;
+      function isColliding(GO:TGameObject):Boolean;
+      function isColliding(Sprite:TSprite):Boolean;
       procedure Update();virtual;
-      procedure Draw;virtual;
+      procedure Draw(Bitmap:AL_BITMAPptr);virtual;
       constructor Create(mode:TObjectMode);
       constructor Create(DefaultAnimation:TAnimatedSprite);
       constructor Create(DefaultSprite:TSprite);
@@ -44,18 +46,29 @@ begin
 
 end;
 
+function TGameObject.isColliding(GO: TGameObject): Boolean;
+begin
+
+end;
+
+function TGameObject.isColliding(Sprite: TSprite): Boolean;
+begin
+
+end;
+
 procedure TGameObject.Update;
 begin
 
 end;
 
-procedure TGameObject.Draw;
+procedure TGameObject.Draw(Bitmap: AL_BITMAPptr);
 begin
 
 end;
 
 constructor TGameObject.Create(mode: TObjectMode);
 begin
+  inherited Create;
   ObjectMode:=mode;
   if mode=omAnim then Animations:=TAnimatedSpriteList.create;
   if mode=omSprite then Sprites:=TSpriteList.create;
@@ -63,17 +76,21 @@ end;
 
 constructor TGameObject.Create(DefaultAnimation: TAnimatedSprite);
 begin
-
+  Create(omAnim);
+  Animations.Add(DefaultAnimation);
 end;
 
 constructor TGameObject.Create(DefaultSprite: TSprite);
 begin
-
+  Create(omSprite);
+  Sprites.Add(DefaultSprite);
 end;
 
 destructor TGameObject.Destroy;
 begin
   inherited Destroy;
+  Animations.Free;
+  Sprites.Free;
 end;
 
 end.

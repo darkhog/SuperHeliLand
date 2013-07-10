@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="22">
+    <Units Count="23">
       <Unit0>
         <Filename Value="alletest.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -122,88 +122,12 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="35"/>
-        <CursorPos X="35" Y="61"/>
+        <TopLine Value="49"/>
+        <CursorPos X="3" Y="51"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit10>
       <Unit11>
-        <Filename Value="mvnoise.pas"/>
-        <UnitName Value="mvNoise"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="24"/>
-      </Unit11>
-      <Unit12>
-        <Filename Value="C:\compilerstuff\allegro.pas\lib\allegro.pas"/>
-        <UnitName Value="allegro"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="4712"/>
-        <CursorPos X="56" Y="4743"/>
-        <UsageCount Value="34"/>
-      </Unit12>
-      <Unit13>
-        <Filename Value="C:\compilerstuff\allegro.pas\lib\alvtable.pas"/>
-        <UnitName Value="alvtable"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="66"/>
-        <CursorPos X="15" Y="81"/>
-        <UsageCount Value="11"/>
-      </Unit13>
-      <Unit14>
-        <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\inc\objpash.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="184"/>
-        <CursorPos X="21" Y="201"/>
-        <UsageCount Value="5"/>
-      </Unit14>
-      <Unit15>
-        <Filename Value="C:\compilerstuff\allegro.pas\lib\alfixed.pas"/>
-        <UnitName Value="alfixed"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="200"/>
-        <CursorPos X="29" Y="217"/>
-        <UsageCount Value="5"/>
-      </Unit15>
-      <Unit16>
-        <Filename Value="C:\lazarus\fpc\2.6.0\source\packages\fcl-base\src\contnrs.pp"/>
-        <UnitName Value="contnrs"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="55"/>
-        <CursorPos X="14" Y="89"/>
-        <UsageCount Value="13"/>
-      </Unit16>
-      <Unit17>
-        <Filename Value="..\simplecoder\mnfrm.pas"/>
-        <UnitName Value="mnfrm"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit17>
-      <Unit18>
-        <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\classes\classesh.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="270"/>
-        <CursorPos X="15" Y="287"/>
-        <UsageCount Value="10"/>
-      </Unit18>
-      <Unit19>
-        <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\classes\lists.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="641"/>
-        <CursorPos X="3" Y="646"/>
-        <UsageCount Value="10"/>
-      </Unit19>
-      <Unit20>
-        <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\sysutils\sysutilh.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="268"/>
-        <CursorPos X="13" Y="285"/>
-        <UsageCount Value="10"/>
-      </Unit20>
-      <Unit21>
         <Filename Value="gamestateunit.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="GameStateUnit"/>
@@ -213,12 +137,97 @@
         <CursorPos X="57" Y="6"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="mvnoise.pas"/>
+        <UnitName Value="mvNoise"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="24"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\compilerstuff\allegro.pas\lib\allegro.pas"/>
+        <UnitName Value="allegro"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="4712"/>
+        <CursorPos X="56" Y="4743"/>
+        <UsageCount Value="34"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\compilerstuff\allegro.pas\lib\alvtable.pas"/>
+        <UnitName Value="alvtable"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="66"/>
+        <CursorPos X="15" Y="81"/>
+        <UsageCount Value="11"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\inc\objpash.inc"/>
+        <EditorIndex Value="12"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="183"/>
+        <CursorPos X="21" Y="201"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\compilerstuff\allegro.pas\lib\alfixed.pas"/>
+        <UnitName Value="alfixed"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="200"/>
+        <CursorPos X="29" Y="217"/>
+        <UsageCount Value="5"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:\lazarus\fpc\2.6.0\source\packages\fcl-base\src\contnrs.pp"/>
+        <UnitName Value="contnrs"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="55"/>
+        <CursorPos X="14" Y="89"/>
+        <UsageCount Value="13"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="..\simplecoder\mnfrm.pas"/>
+        <UnitName Value="mnfrm"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\classes\classesh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="270"/>
+        <CursorPos X="15" Y="287"/>
+        <UsageCount Value="10"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\classes\lists.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="641"/>
+        <CursorPos X="3" Y="646"/>
+        <UsageCount Value="10"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\sysutils\sysutilh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="268"/>
+        <CursorPos X="13" Y="285"/>
+        <UsageCount Value="10"/>
       </Unit21>
+      <Unit22>
+        <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\inc\objpas.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="273"/>
+        <CursorPos X="12" Y="276"/>
+        <UsageCount Value="10"/>
+      </Unit22>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="19" HistoryIndex="18">
+    <JumpHistory Count="21" HistoryIndex="20">
       <Position1>
         <Filename Value="states.pas"/>
         <Caret Line="22" Column="31" TopLine="1"/>
@@ -295,6 +304,14 @@
         <Filename Value="states.pas"/>
         <Caret Line="8" Column="43" TopLine="1"/>
       </Position19>
+      <Position20>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="81" Column="15" TopLine="49"/>
+      </Position20>
+      <Position21>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="27" Column="41" TopLine="7"/>
+      </Position21>
     </JumpHistory>
   </ProjectSession>
   <Debugging>
