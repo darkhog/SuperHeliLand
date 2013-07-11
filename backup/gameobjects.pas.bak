@@ -15,10 +15,10 @@ type
     public
       Animations:TAnimatedSpriteList;
       Sprites:TSpriteList;
-      CurrentAnim:integer;
       CurrentSprite:integer;
       ObjectMode:TObjectMode;
       x,y:Integer;
+      property CurrentAnim:integer read _CurrentAnim write SetAnim;
       procedure MoveTo(_x,_y:Integer);virtual;
       procedure MoveBy(_x,_y:Integer);virtual;
       function isColliding(GO:TGameObject):Boolean;
@@ -30,6 +30,8 @@ type
       constructor Create(DefaultSprite:TSprite);
       destructor Destroy; override;
     private
+      _CurrentAnim:integer;
+      procedure SetAnim(Value:Integer);
   end;
 
 implementation
@@ -120,7 +122,6 @@ begin
                     if Animations.Items[CurrentAnim].NeedUpdate then Animations.Items[CurrentAnim].UpdateFrame;
                     Animations.Items[CurrentAnim].Draw(Bitmap);
                   end;
-                end;
               end;
     omSprite: begin
                 if Sprites.Items[CurrentSprite]<>nil then
@@ -154,6 +155,12 @@ begin
   inherited Destroy;
   Animations.Free;
   Sprites.Free;
+end;
+
+procedure TGameObject.SetAnim(Value: Integer);
+begin
+  _CurrentAnim:=Value;
+  if Animations.Items[_CurrentAnim]<>nil then Animations.Items[_CurrentAnim].Reset;
 end;
 
 end.

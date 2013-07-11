@@ -12,13 +12,16 @@ type
   { TGameObject }
 
   TGameObject = class
+    private
+      _CurrentAnim:integer;
+      procedure SetAnim(Value:Integer);
     public
       Animations:TAnimatedSpriteList;
       Sprites:TSpriteList;
-      CurrentAnim:integer;
       CurrentSprite:integer;
       ObjectMode:TObjectMode;
       x,y:Integer;
+      property CurrentAnim:integer read _CurrentAnim write SetAnim;
       procedure MoveTo(_x,_y:Integer);virtual;
       procedure MoveBy(_x,_y:Integer);virtual;
       function isColliding(GO:TGameObject):Boolean;
@@ -29,7 +32,6 @@ type
       constructor Create(DefaultAnimation:TAnimatedSprite);
       constructor Create(DefaultSprite:TSprite);
       destructor Destroy; override;
-    private
   end;
 
 implementation
@@ -153,6 +155,12 @@ begin
   inherited Destroy;
   Animations.Free;
   Sprites.Free;
+end;
+
+procedure TGameObject.SetAnim(Value: Integer);
+begin
+  _CurrentAnim:=Value;
+  if Animations.Items[_CurrentAnim]<>nil then Animations.Items[_CurrentAnim].Reset;
 end;
 
 end.

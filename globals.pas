@@ -21,6 +21,7 @@ var
   CurrentState:TState;
   MainMenuState:TMainMenuState;
   OptionsState:TOptionsState;
+  DebugState:TDebugState;
   Quit:Boolean;
   MarioFont:AL_FONTptr;
   Buffer:AL_BITMAPptr;

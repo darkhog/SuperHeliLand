@@ -5,7 +5,7 @@ unit States;
 interface
 
 uses
-  Classes, SysUtils,sprites,allegro,al_ogg,contnrs;
+  Classes, SysUtils,sprites,allegro,al_ogg,contnrs,GameObjects;
 
 type
 
@@ -74,14 +74,59 @@ type
 
   end;
 
-  { TGameState }
+  { TDebugState }
 
+  TDebugState = class(TState)
+    public
+      constructor Create;override;
+      destructor Destroy;override;
+      procedure Update;override;
+      procedure BeforeDraw;override;
+      procedure Draw;override;
+      procedure Main;override;
+    private
+      keybelapsed:Integer;
+      MarioGO: TGameObject;
+      OtherMarioGO:TGameObject;
+  end;
 
   function keyreleased(idx:Integer):Boolean;
 implementation
 uses globals;
 var
   last_al_key : AL_KEY_LIST;
+
+{ TDebugState }
+
+constructor TDebugState.Create;
+begin
+  inherited Create;
+end;
+
+destructor TDebugState.Destroy;
+begin
+  inherited Destroy;
+end;
+
+procedure TDebugState.Update;
+begin
+  inherited Update;
+end;
+
+procedure TDebugState.BeforeDraw;
+begin
+  inherited BeforeDraw;
+end;
+
+procedure TDebugState.Draw;
+begin
+  inherited Draw;
+end;
+
+procedure TDebugState.Main;
+begin
+  inherited Main;
+end;
 
 { TGameState }
 
@@ -409,6 +454,12 @@ begin
   Inc(keybelapsed);
   if not destroying then
   begin //making sure we won't get any accidental segfaults
+    //handling Debug State, to activate: right ctrl+left shift+D.
+    if ((al_key[AL_KEY_RCONTROL]<>0) and (al_key[AL_KEY_LSHIFT]<>0) and (al_key[AL_KEY_D]<>0) and (keybelapsed>=KEYBDELAY)) ) then
+      begin
+        keybelapsed:=0;
+        CurrentState:=DebugState;
+      end;
 
     //handling keyboard
     if ((al_key[Options.binding_up]<>0) and (keybelapsed>=KEYBDELAY)) then begin Dec(MenuIndex); keybelapsed:=0; end;

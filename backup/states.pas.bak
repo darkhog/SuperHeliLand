@@ -5,7 +5,7 @@ unit States;
 interface
 
 uses
-  Classes, SysUtils,sprites,allegro,al_ogg,contnrs;
+  Classes, SysUtils,sprites,allegro,al_ogg,contnrs,GameObjects;
 
 type
 
@@ -74,9 +74,9 @@ type
 
   end;
 
-  { TGameState }
+  { TDebugState }
 
-  TGameState = class(TState)
+  TDebugState = class(TState)
     public
       constructor Create;override;
       destructor Destroy;override;
@@ -85,45 +85,52 @@ type
       procedure Draw;override;
       procedure Main;override;
     private
+      keybelapsed:Integer;
+      MarioGO: TGameObject;
+      OtherMarioGO:TGameObject;
   end;
+
   function keyreleased(idx:Integer):Boolean;
 implementation
 uses globals;
 var
   last_al_key : AL_KEY_LIST;
 
-{ TGameState }
+{ TDebugState }
 
-constructor TGameState.Create;
-var bmp:AL_BITMAPptr;
+constructor TDebugState.Create;
 begin
   inherited Create;
 end;
 
-destructor TGameState.Destroy;
+destructor TDebugState.Destroy;
 begin
   inherited Destroy;
 end;
 
-procedure TGameState.Update;
+procedure TDebugState.Update;
 begin
   inherited Update;
 end;
 
-procedure TGameState.BeforeDraw;
+procedure TDebugState.BeforeDraw;
 begin
   inherited BeforeDraw;
 end;
 
-procedure TGameState.Draw;
+procedure TDebugState.Draw;
 begin
   inherited Draw;
 end;
 
-procedure TGameState.Main;
+procedure TDebugState.Main;
 begin
   inherited Main;
 end;
+
+{ TGameState }
+
+
 
 { TOptionsState }
 
