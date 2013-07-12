@@ -108,10 +108,9 @@
         <Filename Value="states.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="States"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="446"/>
+        <TopLine Value="78"/>
         <CursorPos X="66" Y="457"/>
         <UsageCount Value="89"/>
         <Loaded Value="True"/>
@@ -120,6 +119,7 @@
         <Filename Value="gameobjects.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="GameObjects"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
         <TopLine Value="4"/>
@@ -164,12 +164,10 @@
       </Unit14>
       <Unit15>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\inc\objpash.inc"/>
-        <EditorIndex Value="12"/>
         <WindowIndex Value="0"/>
         <TopLine Value="183"/>
         <CursorPos X="21" Y="201"/>
         <UsageCount Value="12"/>
-        <Loaded Value="True"/>
       </Unit15>
       <Unit16>
         <Filename Value="C:\compilerstuff\allegro.pas\lib\alfixed.pas"/>

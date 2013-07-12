@@ -1,5 +1,14 @@
 program alletest;
+{
+ If I ever find out that my next game intended on sale won't end up on TPB on
+ release day, I'll be seriously offended. Then I'll go, login into my TPB account
+ and upload torrent of it myself and seed until it has at least 5 seeders except
+ me. Oh, I'll also announce that on my twitter account @qvear. I don't care if
+ my sales will drop because of it. I care about players.
 
+ Yarr!
+ - Dariusz "Darkhog" G. Jagielski
+}
 {$mode objfpc}{$H+}
 {$apptype gui}
 {$R allegro.res}

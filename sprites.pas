@@ -253,7 +253,7 @@ end;
 
 destructor TAnimatedSprite.Destroy;
 begin
-  //inherited Destroy;
+
   if AnimationSpritesheet<> nil then al_destroy_bitmap(AnimationSpritesheet);
   if AnimationSpritesheetMask<> nil then al_destroy_bitmap(AnimationSpritesheetMask);
   inherited;
@@ -331,6 +331,7 @@ procedure TAnimatedSprite.Reset;
 begin
   _CurrentFrame:=0;
   _NeedUpdate:=true;
+  framecounter:=0;
 end;
 
 { TSprite }

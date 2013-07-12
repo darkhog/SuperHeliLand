@@ -12,8 +12,8 @@
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="18" Y="178"/>
-        <UsageCount Value="163"/>
+        <CursorPos X="34" Y="10"/>
+        <UsageCount Value="166"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -24,18 +24,19 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="11"/>
-        <UsageCount Value="160"/>
+        <UsageCount Value="163"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="sprites.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Sprites"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="10"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="159"/>
-        <CursorPos X="16" Y="171"/>
-        <UsageCount Value="160"/>
+        <TopLine Value="252"/>
+        <CursorPos X="21" Y="264"/>
+        <UsageCount Value="163"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -46,7 +47,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="29" Y="32"/>
-        <UsageCount Value="151"/>
+        <UsageCount Value="154"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -57,7 +58,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="165"/>
         <CursorPos X="17" Y="56"/>
-        <UsageCount Value="134"/>
+        <UsageCount Value="137"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -68,7 +69,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="46"/>
         <CursorPos X="1" Y="65"/>
-        <UsageCount Value="132"/>
+        <UsageCount Value="135"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -79,7 +80,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="11" Y="1"/>
-        <UsageCount Value="130"/>
+        <UsageCount Value="133"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -90,7 +91,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="217"/>
         <CursorPos X="3" Y="221"/>
-        <UsageCount Value="128"/>
+        <UsageCount Value="131"/>
         <Loaded Value="True"/>
       </Unit7>
       <Unit8>
@@ -101,7 +102,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="2"/>
         <CursorPos X="26" Y="24"/>
-        <UsageCount Value="92"/>
+        <UsageCount Value="95"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>
@@ -112,19 +113,18 @@
         <WindowIndex Value="0"/>
         <TopLine Value="78"/>
         <CursorPos X="66" Y="457"/>
-        <UsageCount Value="89"/>
+        <UsageCount Value="92"/>
         <Loaded Value="True"/>
       </Unit9>
       <Unit10>
         <Filename Value="gameobjects.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="GameObjects"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="4"/>
-        <CursorPos X="40" Y="17"/>
-        <UsageCount Value="30"/>
+        <TopLine Value="78"/>
+        <CursorPos X="149" Y="189"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit10>
       <Unit11>
@@ -135,7 +135,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="57" Y="6"/>
-        <UsageCount Value="26"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
       </Unit11>
       <Unit12>

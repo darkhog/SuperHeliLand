@@ -12,6 +12,9 @@ type
   { TGameObject }
 
   TGameObject = class
+    private
+      _CurrentAnim:integer;
+      procedure SetAnim(Value:Integer);
     public
       Animations:TAnimatedSpriteList;
       Sprites:TSpriteList;
@@ -29,9 +32,6 @@ type
       constructor Create(DefaultAnimation:TAnimatedSprite);
       constructor Create(DefaultSprite:TSprite);
       destructor Destroy; override;
-    private
-      _CurrentAnim:integer;
-      procedure SetAnim(Value:Integer);
   end;
 
 implementation
