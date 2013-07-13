@@ -14,11 +14,13 @@ type
   TGameObject = class
     private
       _CurrentAnim:integer; //actual value of current animation
+      _CurrentSprite:integer;//We keep current sprite number separately
+      procedure SetSprite(Value:Integer);
       procedure SetAnim(Value:Integer); //sets value of animation and if it isn't nil reset it
     public
       Animations:TAnimatedSpriteList;                               //list of animations
       Sprites:TSpriteList;                                          //List of sprites
-      CurrentSprite:integer;                                        //We keep current sprite number separately
+
                                                                     //as to not interfere if we want to switch
                                                                     //GO from animation to static sprite
       ObjectMode:TObjectMode;                                       //Is this GO animated or is it just static
@@ -27,6 +29,7 @@ type
                                                                     //game needlessly slower.
       x,y:Integer;                                                  //x/y positions of GO
       property CurrentAnim:integer read _CurrentAnim write SetAnim; //property for current animation
+      property CurrentSprite:integer read _CurrentSprite write SetSprite; //property for current sprite
       procedure MoveTo(_x,_y:Integer);virtual;                      //moves object to specific position
       procedure MoveBy(_x,_y:Integer);virtual;                      //moves object by specified amount of pixels
       function isColliding(GO:TGameObject):Boolean;                 //collision check with another GO
@@ -183,9 +186,23 @@ begin
   Sprites.Free;
 end;
 
+procedure TGameObject.SetSprite(Value: Integer);
+begin
+  _CurrentSprite:=Value; //setting actual sprite value
+  //clamping value so it won't go out of range
+  if _CurrentSprite<0 then _CurrentSprite:=0;
+  if _CurrentSprite>Animations.Count-1 then _CurrentSprite:=Animations.Count-1;
+end;
+
 procedure TGameObject.SetAnim(Value: Integer);
 begin
   _CurrentAnim:=Value; //setting actual animation value
+  //clamping value so it won't go out of range
+  if _CurrentAnim<0 then _CurrentAnim:=0;
+  if _CurrentAnim>Animations.Count-1 then _CurrentAnim:=Animations.Count-1;
+  //after some consideration I've decided to leave check for rare cases when programmer would bork his/her
+  //implementation and try to destroy item in Animations or just add uninitialized TAnimatedSprite.
+  //I need to make sure that game won't crash no matter what.
   if Animations.Items[_CurrentAnim]<>nil then Animations.Items[_CurrentAnim].Reset; //resetting animation if it wasn't nil so it'll play from start.
 end;
 
