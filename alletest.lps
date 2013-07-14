@@ -97,10 +97,11 @@
         <Filename Value="globals.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Globals"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="2"/>
-        <CursorPos X="26" Y="24"/>
+        <TopLine Value="1"/>
+        <CursorPos X="14" Y="32"/>
         <UsageCount Value="96"/>
         <Loaded Value="True"/>
       </Unit8>
@@ -110,8 +111,8 @@
         <UnitName Value="States"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="78"/>
-        <CursorPos X="66" Y="457"/>
+        <TopLine Value="446"/>
+        <CursorPos X="125" Y="463"/>
         <UsageCount Value="93"/>
         <Loaded Value="True"/>
       </Unit9>
@@ -119,7 +120,6 @@
         <Filename Value="gameobjects.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="GameObjects"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
         <TopLine Value="5"/>
@@ -242,59 +242,59 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="states.pas"/>
-        <Caret Line="22" Column="31" TopLine="1"/>
+        <Caret Line="412" Column="1" TopLine="412"/>
       </Position1>
       <Position2>
         <Filename Value="states.pas"/>
-        <Caret Line="412" Column="1" TopLine="412"/>
+        <Caret Line="69" Column="7" TopLine="35"/>
       </Position2>
       <Position3>
         <Filename Value="states.pas"/>
-        <Caret Line="69" Column="7" TopLine="35"/>
+        <Caret Line="49" Column="10" TopLine="49"/>
       </Position3>
       <Position4>
         <Filename Value="states.pas"/>
-        <Caret Line="49" Column="10" TopLine="49"/>
+        <Caret Line="417" Column="44" TopLine="393"/>
       </Position4>
       <Position5>
         <Filename Value="states.pas"/>
-        <Caret Line="417" Column="44" TopLine="393"/>
+        <Caret Line="82" Column="8" TopLine="51"/>
       </Position5>
       <Position6>
         <Filename Value="states.pas"/>
-        <Caret Line="82" Column="8" TopLine="51"/>
+        <Caret Line="75" Column="22" TopLine="75"/>
       </Position6>
       <Position7>
         <Filename Value="states.pas"/>
-        <Caret Line="75" Column="22" TopLine="75"/>
+        <Caret Line="99" Column="17" TopLine="77"/>
       </Position7>
       <Position8>
-        <Filename Value="states.pas"/>
-        <Caret Line="99" Column="17" TopLine="77"/>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="59" Column="16" TopLine="45"/>
       </Position8>
       <Position9>
         <Filename Value="sprites.pas"/>
-        <Caret Line="59" Column="16" TopLine="45"/>
+        <Caret Line="83" Column="10" TopLine="60"/>
       </Position9>
       <Position10>
         <Filename Value="sprites.pas"/>
-        <Caret Line="83" Column="10" TopLine="60"/>
+        <Caret Line="93" Column="44" TopLine="70"/>
       </Position10>
       <Position11>
         <Filename Value="sprites.pas"/>
-        <Caret Line="93" Column="44" TopLine="70"/>
+        <Caret Line="176" Column="20" TopLine="159"/>
       </Position11>
       <Position12>
-        <Filename Value="sprites.pas"/>
-        <Caret Line="176" Column="20" TopLine="159"/>
-      </Position12>
-      <Position13>
         <Filename Value="states.pas"/>
         <Caret Line="99" Column="17" TopLine="77"/>
+      </Position12>
+      <Position13>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="51" Column="18" TopLine="26"/>
       </Position13>
       <Position14>
         <Filename Value="sprites.pas"/>
-        <Caret Line="51" Column="18" TopLine="26"/>
+        <Caret Line="67" Column="22" TopLine="67"/>
       </Position14>
       <Position15>
         <Filename Value="sprites.pas"/>
@@ -302,63 +302,63 @@
       </Position15>
       <Position16>
         <Filename Value="sprites.pas"/>
-        <Caret Line="67" Column="22" TopLine="67"/>
+        <Caret Line="144" Column="3" TopLine="142"/>
       </Position16>
       <Position17>
-        <Filename Value="sprites.pas"/>
-        <Caret Line="144" Column="3" TopLine="142"/>
-      </Position17>
-      <Position18>
         <Filename Value="gameobjects.pas"/>
         <Caret Line="27" Column="23" TopLine="1"/>
-      </Position18>
-      <Position19>
+      </Position17>
+      <Position18>
         <Filename Value="states.pas"/>
         <Caret Line="8" Column="43" TopLine="1"/>
+      </Position18>
+      <Position19>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="81" Column="15" TopLine="49"/>
       </Position19>
       <Position20>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="81" Column="15" TopLine="49"/>
+        <Caret Line="27" Column="41" TopLine="7"/>
       </Position20>
       <Position21>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="27" Column="41" TopLine="7"/>
+        <Caret Line="103" Column="83" TopLine="85"/>
       </Position21>
       <Position22>
-        <Filename Value="gameobjects.pas"/>
-        <Caret Line="103" Column="83" TopLine="85"/>
-      </Position22>
-      <Position23>
         <Filename Value="chunkutils.pas"/>
         <Caret Line="258" Column="117" TopLine="144"/>
+      </Position22>
+      <Position23>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="109" Column="54" TopLine="83"/>
       </Position23>
       <Position24>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="109" Column="54" TopLine="83"/>
+        <Caret Line="102" Column="23" TopLine="88"/>
       </Position24>
       <Position25>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="102" Column="23" TopLine="88"/>
+        <Caret Line="34" Column="13" TopLine="2"/>
       </Position25>
       <Position26>
-        <Filename Value="gameobjects.pas"/>
-        <Caret Line="34" Column="13" TopLine="2"/>
-      </Position26>
-      <Position27>
         <Filename Value="states.pas"/>
         <Caret Line="85" Column="19" TopLine="68"/>
+      </Position26>
+      <Position27>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="163" Column="84" TopLine="133"/>
       </Position27>
       <Position28>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="163" Column="84" TopLine="133"/>
+        <Caret Line="17" Column="27" TopLine="1"/>
       </Position28>
       <Position29>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="17" Column="27" TopLine="1"/>
+        <Caret Line="19" Column="16" TopLine="13"/>
       </Position29>
       <Position30>
-        <Filename Value="gameobjects.pas"/>
-        <Caret Line="19" Column="16" TopLine="13"/>
+        <Filename Value="states.pas"/>
+        <Caret Line="422" Column="36" TopLine="407"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

@@ -8,12 +8,12 @@ uses
   Classes, SysUtils,states,allegro, al_ogg,GameStateUnit;
 type
   TOptions = record
-    sfxvolume,musicvolume:byte;
+    sfxvolume,musicvolume:byte; //volume settings
     binding_left,binding_up,binding_down,binding_right, //keyboard bindings
     binding_fire:byte; //keyboard bindings
-    difficulty:byte;
-    GameSeed:Integer;
-    SeedInEffect:Boolean;
+    difficulty:byte; //difficulty of game.
+    GameSeed:Integer; //seed for world generator
+    SeedInEffect:Boolean; //was player choose to use constant seed?
     SkinName:String[255];
   end;
 
@@ -21,6 +21,7 @@ var
   CurrentState:TState;
   MainMenuState:TMainMenuState;
   OptionsState:TOptionsState;
+  DebugState:TDebugState;
   Quit:Boolean;
   MarioFont:AL_FONTptr;
   Buffer:AL_BITMAPptr;
@@ -28,7 +29,7 @@ var
 const
   SCREENW=640;
   SCREENH=576;
-  KEYBDELAY=15;
+  KEYBDELAY=3;
   DIF_BABYMARIO=0;
   DIF_MARINEPOP=1;
   DIF_SKYPOP=2;

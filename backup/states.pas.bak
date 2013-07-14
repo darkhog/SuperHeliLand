@@ -177,7 +177,7 @@ begin
   MUSGaugeSprite.magentatransparent:=true;
   //creating BINDINGS text
   bmp:=al_create_bitmap(8*8,8);
-  al_clear_to_color(bmp,al_makecol(255,0,255));
+  al_clear_to_color(bmp,al_makecol(255,0,255)); //need to be used so text would be transparent.
   al_textout_ex(bmp,MarioFont,'Bindings',0,0,al_makecol(0,0,0),-1);
   BindingsSprite:=TSprite.Create(bmp,bmp);
   BindingsSprite.ScaleFactor:=4;
@@ -186,7 +186,7 @@ begin
   BindingsSprite.magentatransparent:=true;
   //creating SFX text
   bmp:=al_create_bitmap(3*8,8);
-  al_clear_to_color(bmp,al_makecol(255,0,255));
+  al_clear_to_color(bmp,al_makecol(255,0,255)); //need to be used so text would be transparent.
   al_textout_ex(bmp,MarioFont,'Sfx',0,0,al_makecol(0,0,0),-1);
   SFXSprite:=TSprite.Create(bmp,bmp);
   SFXSprite.ScaleFactor:=4;
@@ -195,7 +195,7 @@ begin
   SFXSprite.magentatransparent:=true;
   //creating MUS text
   bmp:=al_create_bitmap(3*8,8);
-  al_clear_to_color(bmp,al_makecol(255,0,255));
+  al_clear_to_color(bmp,al_makecol(255,0,255)); //need to be used so text would be transparent.
   al_textout_ex(bmp,MarioFont,'Mus',0,0,al_makecol(0,0,0),-1);
   MUSSprite:=TSprite.Create(bmp,bmp);
   MUSSprite.ScaleFactor:=4;
@@ -204,7 +204,7 @@ begin
   MUSSprite.magentatransparent:=true;
   //creating CANCEL text
   bmp:=al_create_bitmap(6*8,8);
-  al_clear_to_color(bmp,al_makecol(255,0,255));
+  al_clear_to_color(bmp,al_makecol(255,0,255)); //need to be used so text would be transparent.
   al_textout_ex(bmp,MarioFont,'Cancel',0,0,al_makecol(0,0,0),-1);
   CancelSprite:=TSprite.Create(bmp,bmp);
   CancelSprite.ScaleFactor:=4;
@@ -213,7 +213,7 @@ begin
   CancelSprite.magentatransparent:=true;
   //creating SAVE text
   bmp:=al_create_bitmap(4*8,8);
-  al_clear_to_color(bmp,al_makecol(255,0,255));
+  al_clear_to_color(bmp,al_makecol(255,0,255)); //need to be used so text would be transparent.
   al_textout_ex(bmp,MarioFont,'Save',0,0,al_makecol(0,0,0),-1);
   SaveSprite:=TSprite.Create(bmp,bmp);
   SaveSprite.ScaleFactor:=4;
@@ -225,13 +225,13 @@ begin
   MenuIndex:=0;
   // we don't destroy anything yet
   destroying:=false;
-  //we need to set this
+  //we need to set this so music will start playing
   firstupdate:=true;
 end;
 
 destructor TOptionsState.Destroy;
 begin
-  //we need to set that to avoid potential segfaults related to drawing
+  //we need to set that to avoid potential segfaults related to drawing or updating
   destroying:=true;
 
   //removing save option sprite
@@ -254,7 +254,7 @@ begin
   if SelectionShroomSprite<>nil then SelectionShroomSprite.Destroy;
   //removing background
   if BGSprite<>nil then BGSprite.Destroy;
-  //destroying music
+  //stopping & destroying music
   al_stop_sample(music);
   al_destroy_sample(music);
   inherited Destroy;
@@ -266,7 +266,12 @@ begin
   Inc(keybelapsed);
   if not destroying then
   begin
-    if firstupdate then begin firstupdate:=false; al_play_sample(music,round((options.musicvolume/100)*255),127,1000,1); end;
+    if firstupdate then
+    begin
+      firstupdate:=false;
+      al_play_sample(music,round((options.musicvolume/100)*255),127,1000,1); //allegro handles music volume in 0..255 range rather than in percentage, so
+                                                                             //we need to calculate that.
+    end;
     if ((al_key[Options.binding_up]<>0) and (keybelapsed>=KEYBDELAY)) then begin Dec(MenuIndex); keybelapsed:=0; end;
     if ((al_key[Options.binding_down]<>0) and (keybelapsed>=KEYBDELAY)) then begin Inc(MenuIndex); keybelapsed:=0; end;
     if MenuIndex>LastMenuIndex then MenuIndex:=0;
@@ -318,15 +323,16 @@ begin
       end;
 
     end;
-    SFXGaugeSprite.x:=(56+((Options.sfxvolume div 10)*8))*4;
-    MUSGaugeSprite.x:=(56+((Options.musicvolume div 10)*8))*4;
+    SFXGaugeSprite.x:=(56+((Options.sfxvolume div 10)*8))*4; //setting on-screen position of gauge for sfx volume
+    MUSGaugeSprite.x:=(56+((Options.musicvolume div 10)*8))*4; //setting on-screen position of gauge for music volume
   end;
   inherited Update;
 end;
 
 procedure TOptionsState.BeforeDraw;
 begin
-  al_adjust_sample(music,round((options.musicvolume/100)*255),127,1000,1);
+  al_adjust_sample(music,round((options.musicvolume/100)*255),127,1000,1); //allegro keeps music volume in 0..255 range rather than as 0..100 percentage
+                                                                           //so we need to calculate that.
   inherited BeforeDraw;
 end;
 
@@ -335,10 +341,9 @@ var i:integer;
 begin
   if not destroying then
   begin
-    al_clear_to_color(buffer,al_makecol(255,255,255));
     //drawing background
     BGSprite.Draw(buffer);
-    //putting gauge back
+    //putting gauge background
     for i:=0 to 10 do
     begin
       GaugebackSprite.Put(Buffer,(56+(i*8))*4,SFXSprite.y);
@@ -363,7 +368,7 @@ begin
   //save: 24,64
   //cancel: 24,72
   //gaugestartx: 56
-    al_blit(buffer,al_screen,0,0,0,0,SCREENW,SCREENH);
+    al_blit(buffer,al_screen,0,0,0,0,SCREENW,SCREENH); //blitting (double buffering), so we won't have "blinking screen".
   end;
   inherited Draw;
 end;
@@ -396,7 +401,7 @@ begin
   //creating Start option sprite
   bmp:=al_create_bitmap(5*8,8);
   al_clear_to_color(bmp,al_makecol(255,0,255));
-  al_textout_ex(bmp,MarioFont,'Start',0,0,al_makecol(0,0,0),-1);
+  al_textout_ex(bmp,MarioFont,'Start',0,0,al_makecol(0,0,0),-1); //need to be used so text would be transparent.
   StartItemSprite:=TSprite.Create(bmp,bmp);
   StartItemSprite.ScaleFactor:=4;
   StartItemSprite.x:=40*4;
@@ -405,7 +410,7 @@ begin
   //creating "Option" option sprite
   bmp:=al_create_bitmap(6*8,8);
   al_clear_to_color(bmp,al_makecol(255,0,255));
-  al_textout_ex(bmp,MarioFont,'Option',0,0,al_makecol(0,0,0),-1);
+  al_textout_ex(bmp,MarioFont,'Option',0,0,al_makecol(0,0,0),-1); //need to be used so text would be transparent.
   OptionItemSprite:=TSprite.Create(bmp,bmp);
   OptionItemSprite.ScaleFactor:=4;
   OptionItemSprite.x:=40*4;
@@ -414,7 +419,7 @@ begin
   //creating Exit option sprite
   bmp:=al_create_bitmap(4*8,8);
   al_clear_to_color(bmp,al_makecol(255,0,255));
-  al_textout_ex(bmp,MarioFont,'Exit',0,0,al_makecol(0,0,0),-1);
+  al_textout_ex(bmp,MarioFont,'Exit',0,0,al_makecol(0,0,0),-1); //need to be used so text would be transparent.
   ExitItemSprite:=TSprite.Create(bmp,bmp);
   ExitItemSprite.ScaleFactor:=4;
   ExitItemSprite.x:=40*4;
@@ -454,6 +459,12 @@ begin
   Inc(keybelapsed);
   if not destroying then
   begin //making sure we won't get any accidental segfaults
+    //handling Debug State, to activate: right ctrl+left shift+D.
+    if ((al_key[AL_KEY_RCONTROL]<>0) and (al_key[AL_KEY_LSHIFT]<>0) and (al_key[AL_KEY_D]<>0) and (keybelapsed>=KEYBDELAY)) ) then
+      begin
+        keybelapsed:=0;
+        CurrentState:=DebugState;
+      end;
 
     //handling keyboard
     if ((al_key[Options.binding_up]<>0) and (keybelapsed>=KEYBDELAY)) then begin Dec(MenuIndex); keybelapsed:=0; end;
