@@ -99,6 +99,8 @@ var
 { TDebugState }
 
 constructor TDebugState.Create;
+var bmp:AL_BITMAPptr;
+    ASprite:TAnimatedSprite;
 begin
   inherited Create;
 end;
@@ -460,7 +462,7 @@ begin
   if not destroying then
   begin //making sure we won't get any accidental segfaults
     //handling Debug State, to activate: right ctrl+left shift+D.
-    if ((al_key[AL_KEY_RCONTROL]<>0) and (al_key[AL_KEY_LSHIFT]<>0) and (al_key[AL_KEY_D]<>0) and (keybelapsed>=KEYBDELAY)) ) then
+    if ((al_key[AL_KEY_RCONTROL]<>0) and (al_key[AL_KEY_LSHIFT]<>0) and (al_key[AL_KEY_D]<>0) and (keybelapsed>=KEYBDELAY))  then
       begin
         keybelapsed:=0;
         CurrentState:=DebugState;

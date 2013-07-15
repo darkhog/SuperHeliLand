@@ -13,7 +13,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="34" Y="10"/>
-        <UsageCount Value="167"/>
+        <UsageCount Value="170"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -24,7 +24,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="11"/>
-        <UsageCount Value="164"/>
+        <UsageCount Value="167"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -35,7 +35,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="236"/>
         <CursorPos X="50" Y="236"/>
-        <UsageCount Value="164"/>
+        <UsageCount Value="167"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -46,7 +46,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="29" Y="32"/>
-        <UsageCount Value="155"/>
+        <UsageCount Value="158"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -57,7 +57,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="165"/>
         <CursorPos X="17" Y="56"/>
-        <UsageCount Value="138"/>
+        <UsageCount Value="141"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -68,7 +68,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="46"/>
         <CursorPos X="1" Y="65"/>
-        <UsageCount Value="136"/>
+        <UsageCount Value="139"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -78,8 +78,8 @@
         <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="11" Y="1"/>
-        <UsageCount Value="134"/>
+        <CursorPos X="54" Y="10"/>
+        <UsageCount Value="137"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -90,30 +90,30 @@
         <WindowIndex Value="0"/>
         <TopLine Value="217"/>
         <CursorPos X="3" Y="221"/>
-        <UsageCount Value="132"/>
+        <UsageCount Value="135"/>
         <Loaded Value="True"/>
       </Unit7>
       <Unit8>
         <Filename Value="globals.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Globals"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="14" Y="32"/>
-        <UsageCount Value="96"/>
+        <UsageCount Value="99"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>
         <Filename Value="states.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="States"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="446"/>
-        <CursorPos X="125" Y="463"/>
-        <UsageCount Value="93"/>
+        <TopLine Value="125"/>
+        <CursorPos X="3" Y="146"/>
+        <UsageCount Value="96"/>
         <Loaded Value="True"/>
       </Unit9>
       <Unit10>
@@ -124,7 +124,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="5"/>
         <CursorPos X="59" Y="194"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
       </Unit10>
       <Unit11>
@@ -134,8 +134,8 @@
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="57" Y="6"/>
-        <UsageCount Value="30"/>
+        <CursorPos X="81" Y="6"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit11>
       <Unit12>

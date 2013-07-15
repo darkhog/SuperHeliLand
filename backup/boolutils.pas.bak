@@ -6,8 +6,6 @@ interface
 
 uses
   Classes, SysUtils;
-  //following functions checks if value is between specific range, so we can avoid
-  //complicated and potentially faulty if statements.
   function Between(num,min,max:Integer):Boolean;
   function Between(num,min,max:Double):Boolean;
   function Between(num,min,max:Single):Boolean;

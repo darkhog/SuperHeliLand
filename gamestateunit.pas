@@ -2,8 +2,8 @@ unit GameStateUnit;
 
 {$mode objfpc}{$H+}
 {
-Since game's main code will be fairly long, especially update and draw methods
-I've come to conclusion it needs its own unit. -Darkhog.
+  Since game's main code will be fairly long, especially update and draw methods
+  I've come to conclusion it needs its own unit. -Dariusz "Darkhog" G. Jagielski.
 }
 interface
 

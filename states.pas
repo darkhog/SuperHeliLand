@@ -99,8 +99,11 @@ var
 { TDebugState }
 
 constructor TDebugState.Create;
+var bmp:AL_BITMAPptr;
+    ASprite:TAnimatedSprite;
 begin
   inherited Create;
+
 end;
 
 destructor TDebugState.Destroy;

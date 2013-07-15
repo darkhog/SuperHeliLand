@@ -1,11 +1,14 @@
 unit GameStateUnit;
 
 {$mode objfpc}{$H+}
-
+{
+Since game's main code will be fairly long, especially update and draw methods
+I've come to conclusion it needs its own unit. -Darkhog.
+}
 interface
 
 uses
-  Classes, SysUtils,states;
+  Classes, SysUtils,states,sprites,allegro,al_ogg;
 type
   TGameState = class(TState)
     public
