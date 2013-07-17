@@ -1,0 +1,11 @@
+First of all, you'll need to download Lazarus IDE (http://lazarus.freepascal.org ), version 1.0 or newer,
+along with necessary packages if you are Linux user.
+
+Then you'll need Allegro.pas library. You can download it from http://allegro-pas.sourceforge.net. You are looking for 4.4 release, as at time
+of making this game, port of Allegro5 was still in alpha. You'll need to also adjust paths in project options.
+
+If you are windows user, that's all you need. If however you are Linux user, you'll have to get libAllegro44.so and put it into /usr/lib or somewhere like that if your distro doesn't have Allegro4.4 in package and allegro-pas distribution provides only windows DLL.
+
+Since this game is developed on worst OS on the planet (a.k.a Microsoft Windows), there may be some not working things or even things that prevent to link on Linux properly. I'll try to test game and compiling process after release (before 1.1) in VM and update this file accordingly.
+
+-Dariusz "Darkhog" G. Jagielski

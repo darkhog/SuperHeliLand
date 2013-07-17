@@ -1,0 +1,7 @@
+Super Heli Land is licensed under conditions of Darkhog Public License.
+
+1. Anyone can make fork of SHL or use SHL's code in his or her non-commercial projects.
+2. Any commercial usage of SHL code is prohibited unless specific arrangements with Dariusz "Darkhog" G. Jagielski, called AUTHOR, are made
+3. AUTHOR can take away right to make fork or use SHL's code at any given time without explanation unless binded by legal contract
+4. AUTHOR needs to be credited in visible place (main menu or start of credits roll) as author of some parts of code unless specific arangements are made with AUTHOR
+5. License only applies to code released under it, meaning it's not viral license like GPL.
