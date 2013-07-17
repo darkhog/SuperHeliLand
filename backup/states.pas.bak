@@ -88,6 +88,7 @@ type
       keybelapsed:Integer;
       MarioGO: TGameObject;
       OtherMarioGO:TGameObject;
+      DebugText:AL_BITMAPptr;
   end;
 
   function keyreleased(idx:Integer):Boolean;
@@ -99,10 +100,18 @@ var
 { TDebugState }
 
 constructor TDebugState.Create;
-var bmp:AL_BITMAPptr;
+var bmp,bmp2:AL_BITMAPptr;
     ASprite:TAnimatedSprite;
 begin
+  //loading MarioGO
+  bmp:=al_load_pcx('mariosub.pcx',@al_default_palette);
+  bmp2:=al_load_pcx('mariosub_mask.pcx',@al_default_palette);
+  ASprite:=TAnimatedSprite.Create(bmp,bmp2,2,atLoop);
+  Asprite.DelayBetweenFrames:=2;
+  ASprite.FrameWidth:=16;
+  MarioGO:=TGameObject.Create(ASprite);
   inherited Create;
+
 end;
 
 destructor TDebugState.Destroy;

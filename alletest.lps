@@ -13,18 +13,19 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="34" Y="10"/>
-        <UsageCount Value="180"/>
+        <UsageCount Value="190"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="masked_collision.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="masked_collision"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="11"/>
-        <UsageCount Value="177"/>
+        <UsageCount Value="187"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -35,7 +36,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="236"/>
         <CursorPos X="50" Y="236"/>
-        <UsageCount Value="177"/>
+        <UsageCount Value="187"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -46,7 +47,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="29" Y="32"/>
-        <UsageCount Value="168"/>
+        <UsageCount Value="178"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -57,7 +58,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="165"/>
         <CursorPos X="17" Y="56"/>
-        <UsageCount Value="151"/>
+        <UsageCount Value="161"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -68,7 +69,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="46"/>
         <CursorPos X="1" Y="65"/>
-        <UsageCount Value="149"/>
+        <UsageCount Value="159"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -79,7 +80,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="54" Y="10"/>
-        <UsageCount Value="147"/>
+        <UsageCount Value="157"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -90,7 +91,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="217"/>
         <CursorPos X="3" Y="221"/>
-        <UsageCount Value="145"/>
+        <UsageCount Value="155"/>
         <Loaded Value="True"/>
       </Unit7>
       <Unit8>
@@ -101,19 +102,18 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="14" Y="32"/>
-        <UsageCount Value="109"/>
+        <UsageCount Value="119"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>
         <Filename Value="states.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="States"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="85"/>
-        <CursorPos X="3" Y="106"/>
-        <UsageCount Value="106"/>
+        <TopLine Value="100"/>
+        <CursorPos X="3" Y="127"/>
+        <UsageCount Value="116"/>
         <Loaded Value="True"/>
       </Unit9>
       <Unit10>
@@ -124,7 +124,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="5"/>
         <CursorPos X="59" Y="194"/>
-        <UsageCount Value="47"/>
+        <UsageCount Value="57"/>
         <Loaded Value="True"/>
       </Unit10>
       <Unit11>
@@ -135,7 +135,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="81" Y="6"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="53"/>
         <Loaded Value="True"/>
       </Unit11>
       <Unit12>
@@ -144,7 +144,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="22"/>
       </Unit12>
       <Unit13>
         <Filename Value="C:\compilerstuff\allegro.pas\lib\allegro.pas"/>
@@ -152,7 +152,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="4712"/>
         <CursorPos X="56" Y="4743"/>
-        <UsageCount Value="33"/>
+        <UsageCount Value="32"/>
       </Unit13>
       <Unit14>
         <Filename Value="C:\compilerstuff\allegro.pas\lib\alvtable.pas"/>
@@ -160,14 +160,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="66"/>
         <CursorPos X="15" Y="81"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit14>
       <Unit15>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\inc\objpash.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="183"/>
         <CursorPos X="21" Y="201"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
       </Unit15>
       <Unit16>
         <Filename Value="C:\compilerstuff\allegro.pas\lib\alfixed.pas"/>
@@ -175,7 +175,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="200"/>
         <CursorPos X="29" Y="217"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit16>
       <Unit17>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\packages\fcl-base\src\contnrs.pp"/>
@@ -183,7 +183,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="55"/>
         <CursorPos X="14" Y="89"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="11"/>
       </Unit17>
       <Unit18>
         <Filename Value="..\simplecoder\mnfrm.pas"/>
@@ -191,49 +191,49 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit18>
       <Unit19>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\classes\classesh.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="270"/>
         <CursorPos X="15" Y="287"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit19>
       <Unit20>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\classes\lists.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="641"/>
         <CursorPos X="3" Y="646"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit20>
       <Unit21>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\sysutils\sysutilh.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="268"/>
         <CursorPos X="13" Y="285"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit21>
       <Unit22>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\inc\objpas.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="273"/>
         <CursorPos X="12" Y="276"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit22>
       <Unit23>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\inc\systemh.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="554"/>
         <CursorPos X="11" Y="571"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit23>
       <Unit24>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\inc\system.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="502"/>
         <CursorPos X="11" Y="519"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit24>
     </Units>
     <General>

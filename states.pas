@@ -88,6 +88,8 @@ type
       keybelapsed:Integer;
       MarioGO: TGameObject;
       OtherMarioGO:TGameObject;
+      DebugText:AL_BITMAPptr;
+      DebugHUE:Integer;
   end;
 
   function keyreleased(idx:Integer):Boolean;
@@ -99,10 +101,30 @@ var
 { TDebugState }
 
 constructor TDebugState.Create;
-var bmp:AL_BITMAPptr;
+var bmp,bmp2:AL_BITMAPptr;
     ASprite:TAnimatedSprite;
 begin
   inherited Create;
+  //loading MarioGO
+  bmp:=al_load_pcx('mariosub.pcx',@al_default_palette);
+  bmp2:=al_load_pcx('mariosub_mask.pcx',@al_default_palette);
+  ASprite:=TAnimatedSprite.Create(bmp,bmp2,2,atLoop);
+  Asprite.DelayBetweenFrames:=2;
+  ASprite.FrameWidth:=16;
+  ASprite.ScaleFactor:=4;
+  MarioGO:=TGameObject.Create(ASprite);
+  //loading OtherMarioGO
+  bmp:=al_load_pcx('mariosub_rev.pcx',@al_default_palette);
+  bmp2:=al_load_pcx('mariosub_rev_mask.pcx',@al_default_palette);
+  ASprite:=TAnimatedSprite.Create(bmp,bmp2,2,atLoop);
+  Asprite.DelayBetweenFrames:=2;
+  ASprite.FrameWidth:=16;
+  ASprite.ScaleFactor:=4;
+  OtherMarioGO:=TGameObject.Create(ASprite);
+  //creating debug text bitmap
+  DebugText:=al_create_bitmap(5*8,8); //we don't need to draw text, as we we'll
+                                      //do that in draw, but we need to make this bitmap.
+
 
 end;
 
