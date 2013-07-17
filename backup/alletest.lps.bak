@@ -11,9 +11,9 @@
         <UnitName Value="alletest"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="34" Y="10"/>
-        <UsageCount Value="186"/>
+        <TopLine Value="163"/>
+        <CursorPos X="25" Y="192"/>
+        <UsageCount Value="194"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -22,9 +22,9 @@
         <UnitName Value="masked_collision"/>
         <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="11"/>
-        <UsageCount Value="183"/>
+        <TopLine Value="16"/>
+        <CursorPos X="1" Y="40"/>
+        <UsageCount Value="191"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -33,9 +33,9 @@
         <UnitName Value="Sprites"/>
         <EditorIndex Value="10"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="236"/>
+        <TopLine Value="287"/>
         <CursorPos X="50" Y="236"/>
-        <UsageCount Value="183"/>
+        <UsageCount Value="191"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -46,7 +46,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="29" Y="32"/>
-        <UsageCount Value="174"/>
+        <UsageCount Value="182"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -57,7 +57,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="165"/>
         <CursorPos X="17" Y="56"/>
-        <UsageCount Value="157"/>
+        <UsageCount Value="165"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -68,7 +68,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="46"/>
         <CursorPos X="1" Y="65"/>
-        <UsageCount Value="155"/>
+        <UsageCount Value="163"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -79,7 +79,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="54" Y="10"/>
-        <UsageCount Value="153"/>
+        <UsageCount Value="161"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -90,7 +90,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="217"/>
         <CursorPos X="3" Y="221"/>
-        <UsageCount Value="151"/>
+        <UsageCount Value="159"/>
         <Loaded Value="True"/>
       </Unit7>
       <Unit8>
@@ -101,7 +101,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="14" Y="32"/>
-        <UsageCount Value="115"/>
+        <UsageCount Value="123"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>
@@ -112,8 +112,8 @@
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="100"/>
-        <CursorPos X="3" Y="127"/>
-        <UsageCount Value="112"/>
+        <CursorPos X="32" Y="124"/>
+        <UsageCount Value="120"/>
         <Loaded Value="True"/>
       </Unit9>
       <Unit10>
@@ -122,9 +122,9 @@
         <UnitName Value="GameObjects"/>
         <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="5"/>
-        <CursorPos X="59" Y="194"/>
-        <UsageCount Value="53"/>
+        <TopLine Value="57"/>
+        <CursorPos X="75" Y="75"/>
+        <UsageCount Value="61"/>
         <Loaded Value="True"/>
       </Unit10>
       <Unit11>
@@ -135,7 +135,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="81" Y="6"/>
-        <UsageCount Value="49"/>
+        <UsageCount Value="57"/>
         <Loaded Value="True"/>
       </Unit11>
       <Unit12>
@@ -242,123 +242,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="states.pas"/>
-        <Caret Line="412" Column="1" TopLine="412"/>
+        <Caret Line="82" Column="8" TopLine="51"/>
       </Position1>
       <Position2>
         <Filename Value="states.pas"/>
-        <Caret Line="69" Column="7" TopLine="35"/>
+        <Caret Line="75" Column="22" TopLine="75"/>
       </Position2>
       <Position3>
         <Filename Value="states.pas"/>
-        <Caret Line="49" Column="10" TopLine="49"/>
+        <Caret Line="99" Column="17" TopLine="77"/>
       </Position3>
       <Position4>
-        <Filename Value="states.pas"/>
-        <Caret Line="417" Column="44" TopLine="393"/>
-      </Position4>
-      <Position5>
-        <Filename Value="states.pas"/>
-        <Caret Line="82" Column="8" TopLine="51"/>
-      </Position5>
-      <Position6>
-        <Filename Value="states.pas"/>
-        <Caret Line="75" Column="22" TopLine="75"/>
-      </Position6>
-      <Position7>
-        <Filename Value="states.pas"/>
-        <Caret Line="99" Column="17" TopLine="77"/>
-      </Position7>
-      <Position8>
         <Filename Value="sprites.pas"/>
         <Caret Line="59" Column="16" TopLine="45"/>
+      </Position4>
+      <Position5>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="83" Column="10" TopLine="60"/>
+      </Position5>
+      <Position6>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="93" Column="44" TopLine="70"/>
+      </Position6>
+      <Position7>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="176" Column="20" TopLine="159"/>
+      </Position7>
+      <Position8>
+        <Filename Value="states.pas"/>
+        <Caret Line="99" Column="17" TopLine="77"/>
       </Position8>
       <Position9>
         <Filename Value="sprites.pas"/>
-        <Caret Line="83" Column="10" TopLine="60"/>
+        <Caret Line="51" Column="18" TopLine="26"/>
       </Position9>
       <Position10>
         <Filename Value="sprites.pas"/>
-        <Caret Line="93" Column="44" TopLine="70"/>
+        <Caret Line="67" Column="22" TopLine="67"/>
       </Position10>
       <Position11>
         <Filename Value="sprites.pas"/>
-        <Caret Line="176" Column="20" TopLine="159"/>
+        <Caret Line="67" Column="22" TopLine="67"/>
       </Position11>
       <Position12>
-        <Filename Value="states.pas"/>
-        <Caret Line="99" Column="17" TopLine="77"/>
-      </Position12>
-      <Position13>
-        <Filename Value="sprites.pas"/>
-        <Caret Line="51" Column="18" TopLine="26"/>
-      </Position13>
-      <Position14>
-        <Filename Value="sprites.pas"/>
-        <Caret Line="67" Column="22" TopLine="67"/>
-      </Position14>
-      <Position15>
-        <Filename Value="sprites.pas"/>
-        <Caret Line="67" Column="22" TopLine="67"/>
-      </Position15>
-      <Position16>
         <Filename Value="sprites.pas"/>
         <Caret Line="144" Column="3" TopLine="142"/>
+      </Position12>
+      <Position13>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="27" Column="23" TopLine="1"/>
+      </Position13>
+      <Position14>
+        <Filename Value="states.pas"/>
+        <Caret Line="8" Column="43" TopLine="1"/>
+      </Position14>
+      <Position15>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="81" Column="15" TopLine="49"/>
+      </Position15>
+      <Position16>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="27" Column="41" TopLine="7"/>
       </Position16>
       <Position17>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="27" Column="23" TopLine="1"/>
+        <Caret Line="103" Column="83" TopLine="85"/>
       </Position17>
       <Position18>
-        <Filename Value="states.pas"/>
-        <Caret Line="8" Column="43" TopLine="1"/>
+        <Filename Value="chunkutils.pas"/>
+        <Caret Line="258" Column="117" TopLine="144"/>
       </Position18>
       <Position19>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="81" Column="15" TopLine="49"/>
+        <Caret Line="109" Column="54" TopLine="83"/>
       </Position19>
       <Position20>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="27" Column="41" TopLine="7"/>
+        <Caret Line="102" Column="23" TopLine="88"/>
       </Position20>
       <Position21>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="103" Column="83" TopLine="85"/>
+        <Caret Line="34" Column="13" TopLine="2"/>
       </Position21>
       <Position22>
-        <Filename Value="chunkutils.pas"/>
-        <Caret Line="258" Column="117" TopLine="144"/>
+        <Filename Value="states.pas"/>
+        <Caret Line="85" Column="19" TopLine="68"/>
       </Position22>
       <Position23>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="109" Column="54" TopLine="83"/>
+        <Caret Line="163" Column="84" TopLine="133"/>
       </Position23>
       <Position24>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="102" Column="23" TopLine="88"/>
+        <Caret Line="17" Column="27" TopLine="1"/>
       </Position24>
       <Position25>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="34" Column="13" TopLine="2"/>
+        <Caret Line="19" Column="16" TopLine="13"/>
       </Position25>
       <Position26>
         <Filename Value="states.pas"/>
-        <Caret Line="85" Column="19" TopLine="68"/>
+        <Caret Line="422" Column="36" TopLine="407"/>
       </Position26>
       <Position27>
-        <Filename Value="gameobjects.pas"/>
-        <Caret Line="163" Column="84" TopLine="133"/>
+        <Filename Value="states.pas"/>
+        <Caret Line="514" Column="22" TopLine="503"/>
       </Position27>
       <Position28>
-        <Filename Value="gameobjects.pas"/>
-        <Caret Line="17" Column="27" TopLine="1"/>
+        <Filename Value="states.pas"/>
+        <Caret Line="174" Column="50" TopLine="147"/>
       </Position28>
       <Position29>
-        <Filename Value="gameobjects.pas"/>
-        <Caret Line="19" Column="16" TopLine="13"/>
+        <Filename Value="masked_collision.pas"/>
+        <Caret Line="40" Column="1" TopLine="16"/>
       </Position29>
       <Position30>
         <Filename Value="states.pas"/>
-        <Caret Line="422" Column="36" TopLine="407"/>
+        <Caret Line="119" Column="26" TopLine="115"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

@@ -171,6 +171,7 @@ begin
 
       al_textout_ex(al_screen,al_font,'Creating states... ',0,120,al_makeacol_depth(al_desktop_color_depth,128,128,128,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));
       MainMenuState:=TMainMenuState.Create;
+      DebugState:=TDebugState.Create;
       OptionsState:=TOptionsState.Create;
       CurrentState:=MainMenuState;
       al_textout_ex(al_screen,al_font,'OK',600,120,al_makeacol_depth(al_desktop_color_depth,0,255,0,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));
@@ -188,8 +189,9 @@ begin
       SaveOptions('game.opt');
       al_destroy_font(MarioFont);
       CurrentState:=nil;
-      MainMenuState.Destroy;
-      OptionsState.Destroy;
+      MainMenuState.Free;
+      OptionsState.Free;
+      Debugstate.Free;
       al_destroy_bitmap(buffer);
   end;
 end.

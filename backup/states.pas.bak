@@ -89,6 +89,7 @@ type
       MarioGO: TGameObject;
       OtherMarioGO:TGameObject;
       DebugText:AL_BITMAPptr;
+      DebugHUE:Integer;
   end;
 
   function keyreleased(idx:Integer):Boolean;
@@ -103,35 +104,87 @@ constructor TDebugState.Create;
 var bmp,bmp2:AL_BITMAPptr;
     ASprite:TAnimatedSprite;
 begin
+  inherited Create;
   //loading MarioGO
   bmp:=al_load_pcx('mariosub.pcx',@al_default_palette);
   bmp2:=al_load_pcx('mariosub_mask.pcx',@al_default_palette);
   ASprite:=TAnimatedSprite.Create(bmp,bmp2,2,atLoop);
   Asprite.DelayBetweenFrames:=2;
+  ASprite.magentatransparent:=true;
   ASprite.FrameWidth:=16;
+  ASprite.ScaleFactor:=4;
   MarioGO:=TGameObject.Create(ASprite);
-  inherited Create;
+  Mariogo.x:=0;
+  Mariogo.y:=0;
+  MarioGO.CurrentAnim:=0;
+  //loading OtherMarioGO
+  bmp:=al_load_pcx('mariosub_rev.pcx',@al_default_palette);
+  bmp2:=al_load_pcx('mariosub_rev_mask.pcx',@al_default_palette);
+  ASprite:=TAnimatedSprite.Create(bmp,bmp2,2,atLoop);
+  Asprite.DelayBetweenFrames:=2;
+  ASprite.FrameWidth:=16;
+  ASprite.magentatransparent:=true;
+  ASprite.ScaleFactor:=4;
+  OtherMarioGO:=TGameObject.Create(ASprite);
+  OtherMarioGO.x:=6*8*4;
+  OtherMarioGO.y:=6*8*4;
+  OtherMarioGO.CurrentAnim:=0;
+  //creating debug text bitmap
+  DebugText:=al_create_bitmap(5*8,8); //we don't need to draw text, as we we'll
+                                      //do that in draw, but we need to make this bitmap.
+  DebugHUE:=0; //setting default hue. Debug will be rainbow-y.
+
 
 end;
 
 destructor TDebugState.Destroy;
 begin
+  al_destroy_bitmap(DebugText);
+  MarioGO.Destroy;
+  OtherMarioGO.Destroy;
   inherited Destroy;
 end;
 
 procedure TDebugState.Update;
 begin
+  Inc(DebugHUE);
+  MarioGO.Update;
+  OtherMarioGO.Update;
+  if DebugHUE>=360 then DebugHUE:=0;
+  if al_key[Options.binding_up]<>0 then MarioGO.y:=MarioGO.y-4;
+    if MarioGO.isColliding(OtherMarioGO) then MarioGO.y:=MarioGO.y+4;
+  if al_key[Options.binding_down]<>0 then MarioGO.y:=MarioGO.y+4;
+    if MarioGO.isColliding(OtherMarioGO) then MarioGO.y:=MarioGO.y-4;
+  if al_key[Options.binding_left]<>0 then MarioGO.x:=MarioGO.x-4;
+    if MarioGO.isColliding(OtherMarioGO) then MarioGO.x:=MarioGO.x+4;
+  if al_key[Options.binding_right]<>0 then MarioGO.x:=MarioGO.x+4;
+    if MarioGO.isColliding(OtherMarioGO) then MarioGO.x:=MarioGO.x-4;
+  if al_key[AL_KEY_ESC]<>0 then CurrentState:=MainMenuState;
   inherited Update;
 end;
 
 procedure TDebugState.BeforeDraw;
+var r,g,b:Integer;
 begin
   inherited BeforeDraw;
+  al_clear_to_color(DebugText,al_makecol(255,0,255));
+  al_hsv_to_rgb(DebugHUE,1,1,r,g,b);
+  al_textout_ex(DebugText,MarioFont,'DEBUG',0,0,al_makecol(r,g,b),-1);
 end;
 
 procedure TDebugState.Draw;
 begin
   inherited Draw;
+  al_clear_to_color(Buffer,al_makecol(255,255,255));
+  if MarioGO.y>OtherMarioGO.y then begin
+    OtherMarioGO.Draw(Buffer);
+    MarioGO.Draw(buffer);
+  end else begin
+    MarioGO.Draw(buffer);
+    OtherMarioGO.Draw(Buffer);  //simple y-sorting.
+  end;
+  al_masked_stretch_blit(DebugText,Buffer,0,0,DebugText^.w,DebugText^.h,0,0,DebugText^.w*4,DebugText^.h*4);
+  al_blit(Buffer,al_screen,0,0,0,0,SCREENW,SCREENH);
 end;
 
 procedure TDebugState.Main;
