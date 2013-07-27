@@ -5,7 +5,7 @@ unit GameObjects;
 interface
 
 uses
-  Classes, SysUtils, Sprites,contnrs,allegro;
+  Classes, SysUtils, Sprites,contnrs,allegro,boolUtils;
 type
   TObjectMode = (omAnim,omSprite);
 
@@ -67,11 +67,13 @@ begin
   Result:=false; //setting result just in case
   case ObjectMode of
     omAnim:   begin
-                if Animations.Items[CurrentAnim]<>nil then //safety check so we won't get segfault
+                if (((Between(CurrentAnim,-1,Animations.Count)) and (Animations.Items[CurrentAnim]<>nil))) then //safety check so we won't get segfault
                   if GO.ObjectMode=omAnim then //checking if object mode of other game object is animation
                   begin
                     //setting result, checking other's GO "nilness" of animation
-                    Result:=((GO.Animations.Items[GO.CurrentAnim]<>nil) and (Animations.Items[CurrentAnim].IsColliding(GO.Animations.Items[GO.CurrentAnim])));
+
+                    if ((Between(GO.CurrentAnim,-1,GO.Animations.Count))) and (Assigned(Pointer(GO.Animations.Items[GO.CurrentAnim]))) then
+                      Result:=Animations.Items[CurrentAnim].IsColliding(GO.Animations.Items[GO.CurrentAnim]);
                   end else //if it's not omAnim, then it must be in sprite mode
                   begin
                     //setting result, checking other's GO "nilness" of sprite

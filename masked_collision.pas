@@ -30,14 +30,14 @@ begin
 	  xmax := min(xmax1, xmax2);
 	  ymax := min(ymax1, ymax2);
 	  if ((xmax <= xmin) or (ymax <= ymin)) then begin Result:=false; exit; end;
-	  mask1 := al_bitmap_mask_color(sprite1.ActualMaskBitmap);
-	  mask2 := al_bitmap_mask_color(sprite2.ActualMaskBitmap);
+	  if sprite1.ActualMaskBitmap <> nil then mask1 := al_bitmap_mask_color(sprite1.ActualMaskBitmap);
+	  if sprite1.ActualMaskBitmap <> nil then mask2 := al_bitmap_mask_color(sprite2.ActualMaskBitmap);
 	  for y := ymin to ymax-1 do begin
 	    for x := xmin to xmax-1 do begin
 	      x1 := x - Sprite1.x; y1 := y - Sprite1.y;
 	      x2 := x - Sprite2.x; y2 := y - Sprite2.y;
-	      color1 := al_getpixel(sprite1.ActualMaskBitmap, x1, y1);
-	      color2 := al_getpixel(sprite2.ActualMaskBitmap, x2, y2);
+	      if sprite1.ActualMaskBitmap <> nil then color1 := al_getpixel(sprite1.ActualMaskBitmap, x1, y1) else color1:=al_makecol(255,0,255);
+	      if sprite2.ActualMaskBitmap <> nil then color2 := al_getpixel(sprite2.ActualMaskBitmap, x2, y2) else color2:=al_makecol(255,0,255);
 	      if (((color1<>mask1) and (color2 <> mask2)) {or ((al_geta(color1)<128)) and ((al_geta(color2)<128))}) then begin Result:=true; exit; end;
 	    end;
 	  end;

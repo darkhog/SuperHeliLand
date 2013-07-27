@@ -371,7 +371,11 @@ end;
 procedure TSprite.UpdateMask;
 begin
   //this should be called after changing scale factor of sprite, so it would collide properly
-  if ActualMaskBitmap<>nil then al_destroy_bitmap(ActualMaskBitmap); //preventing memory leak
+  if ActualMaskBitmap<>nil then
+  begin
+    al_destroy_bitmap(ActualMaskBitmap);
+    ActualMaskBitmap := nil;
+  end; //preventing memory leak
   if MaskBitmap=nil then exit; //preventing segfault
   if ScaleFactor=1 then
   begin
@@ -403,6 +407,8 @@ end;
 
 function TSprite.IsColliding(other: TSprite): Boolean;
 begin
+  Result:=false;
+  if ((ActualMaskBitmap=nil) or (other.ActualMaskBitmap=nil)) then exit; //prevents segfault.
   Result:=collide(self,other);
 end;
 
