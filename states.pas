@@ -176,6 +176,7 @@ procedure TDebugState.Draw;
 begin
   inherited Draw;
   al_clear_to_color(Buffer,al_makecol(255,255,255));
+  if MarioGO.isColliding(OtherMarioGO) then al_rectfill(Buffer,6*8*4,0,7*8*4,8*4,al_makecol(0,0,255));
   if MarioGO.y>OtherMarioGO.y then begin
     OtherMarioGO.Draw(Buffer);
     MarioGO.Draw(buffer);

@@ -109,7 +109,7 @@ begin
   bmp:=al_load_pcx('mariosub.pcx',@al_default_palette);
   bmp2:=al_load_pcx('mariosub_mask.pcx',@al_default_palette);
   ASprite:=TAnimatedSprite.Create(bmp,bmp2,2,atLoop);
-  Asprite.DelayBetweenFrames:=2;
+  Asprite.DelayBetweenFrames:=6;
   ASprite.magentatransparent:=true;
   ASprite.FrameWidth:=16;
   ASprite.ScaleFactor:=4;
@@ -121,7 +121,7 @@ begin
   bmp:=al_load_pcx('mariosub_rev.pcx',@al_default_palette);
   bmp2:=al_load_pcx('mariosub_rev_mask.pcx',@al_default_palette);
   ASprite:=TAnimatedSprite.Create(bmp,bmp2,2,atLoop);
-  Asprite.DelayBetweenFrames:=2;
+  Asprite.DelayBetweenFrames:=6;
   ASprite.FrameWidth:=16;
   ASprite.magentatransparent:=true;
   ASprite.ScaleFactor:=4;

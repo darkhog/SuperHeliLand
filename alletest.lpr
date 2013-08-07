@@ -17,9 +17,9 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Classes, allegro, sprites, PerlinNoiseUnit, WorldGen, boolUtils,
-  Tilesets, ChunkUtils, Globals, states, GameObjects, GameStateUnit;
+  Tilesets, ChunkUtils, Globals, states, GameObjects, GameStateUnit, Crt;
 var lasted,chunklasted,x,y,chunkx:Integer;
-
+    TicksInQueue:Integer;
     pause:boolean;
 
     WorldGenerator:TWorldGenerator;
@@ -91,7 +91,7 @@ const pausedelay=10;
   procedure update();CDECL;
   begin
     //frame update
-    if ((CurrentState<>nil) and (not quit)) then CurrentState.Update;
+    Inc(TicksInQueue);
     //update_keyboard;
   end;
 
@@ -181,9 +181,15 @@ begin
       Buffer:=al_create_bitmap(SCREENW,SCREENH);
       //main loop
       repeat
+        while TicksInQueue>0 do
+        begin
+          if ((CurrentState<>nil) and (not quit)) then CurrentState.Update;
+          Dec(TicksInQueue);
+        end;
         if not quit then CurrentState.BeforeDraw;
         if not quit then CurrentState.Draw;
         if not quit then CurrentState.Main;
+
 
       until quit;
       SaveOptions('game.opt');
