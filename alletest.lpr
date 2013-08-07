@@ -124,37 +124,8 @@ begin
       al_install_int_ex(@Update,AL_BPS_TO_TIMER(60));
       al_textout_ex(al_screen,al_font,'OK',600,40,al_makeacol_depth(al_desktop_color_depth,0,255,0,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));
 
-      //making buffer so screen won't blink
-      {al_textout_ex(al_screen,al_font,'Tworzenie bufora ramki... ',0,60,al_makeacol_depth(al_desktop_color_depth,128,128,128,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));
-      buffer:=al_create_bitmap_ex(al_desktop_color_depth,640,576);
-      al_textout_ex(al_screen,al_font,'OK',600,60,al_makeacol_depth(al_desktop_color_depth,0,255,0,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));}
 
-      //loading tileset
-      {al_textout_ex(al_screen,al_font,'Ladowanie Tilesetu... ',0,80,al_makeacol_depth(al_desktop_color_depth,128,128,128,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));
-      Tileset:=TTileset.Create();
-      Tileset.TilesetSprite:=TSprite.Create(al_load_pcx('tileset.pcx',@al_default_palette),al_load_pcx('tileset_mask.pcx',@al_default_palette));
-      Tileset.TilesetCols:=5;
-      Tileset.TilesetRows:=1;
-      Tileset.TileSize:=8;
-      al_textout_ex(al_screen,al_font,'OK',600,80,al_makeacol_depth(al_desktop_color_depth,0,255,0,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));}
 
-      //let's make some noise.
-      {al_textout_ex(al_screen,al_font,'Tworzenie perlina... ',0,100,al_makeacol_depth(al_desktop_color_depth,128,128,128,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));
-      perlin:=al_create_bitmap_ex(al_desktop_color_depth,18,18);
-      Randomize;
-      WorldGenerator:= TWorldGenerator.Create(Random(High(Integer)));
-      chunkx:=0;
-      Chunk:=TChunk.Create(18);
-      Chunk.Data:=WorldGenerator.GenerateChunkData(chunkx,0,18);
-      Inc(chunkx);
-
-      for x:=0 to 18-1 do begin
-        for y:=0 to 18-1 do begin
-
-          al_putpixel(perlin,x,y,generate_pixel(x,y));
-        end;
-
-      end;}
 
       //loading settings
       al_textout_ex(al_screen,al_font,'Installing sound... ',0,60,al_makeacol_depth(al_desktop_color_depth,128,128,128,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));
@@ -167,18 +138,19 @@ begin
       MarioFont:=al_load_font('marioland.pcx',nil,nil);
       al_textout_ex(al_screen,al_font,'OK',600,100,al_makeacol_depth(al_desktop_color_depth,0,255,0,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));
       //loading marioland font
-
-
       al_textout_ex(al_screen,al_font,'Creating states... ',0,120,al_makeacol_depth(al_desktop_color_depth,128,128,128,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));
       MainMenuState:=TMainMenuState.Create;
       DebugState:=TDebugState.Create;
       OptionsState:=TOptionsState.Create;
       CurrentState:=MainMenuState;
       al_textout_ex(al_screen,al_font,'OK',600,120,al_makeacol_depth(al_desktop_color_depth,0,255,0,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));
+      //making buffer so screen won't blink
+      al_textout_ex(al_screen,al_font,'Creating frame buffer... ',0,140,al_makeacol_depth(al_desktop_color_depth,128,128,128,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));
+      buffer:=al_create_bitmap_ex(al_desktop_color_depth,SCREENW,SCREENH);
+      al_textout_ex(al_screen,al_font,'OK',600,140,al_makeacol_depth(al_desktop_color_depth,0,255,0,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));
+      al_textout_ex(al_screen,al_font,'Starting main loop... ',0,160,al_makeacol_depth(al_desktop_color_depth,128,128,128,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));
 
-      al_textout_ex(al_screen,al_font,'Starting main loop... ',0,140,al_makeacol_depth(al_desktop_color_depth,128,128,128,255),al_makeacol_depth(al_desktop_color_depth,0,0,0,255));
 
-      Buffer:=al_create_bitmap(SCREENW,SCREENH);
       //main loop
       repeat
         while TicksInQueue>0 do

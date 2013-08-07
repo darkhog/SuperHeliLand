@@ -9,11 +9,10 @@
         <Filename Value="alletest.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="alletest"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="165"/>
-        <CursorPos X="29" Y="187"/>
+        <TopLine Value="127"/>
+        <CursorPos X="7" Y="141"/>
         <UsageCount Value="213"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -100,7 +99,7 @@
         <UnitName Value="Globals"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
+        <TopLine Value="58"/>
         <CursorPos X="14" Y="32"/>
         <UsageCount Value="143"/>
         <Loaded Value="True"/>
@@ -111,7 +110,7 @@
         <UnitName Value="States"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="169"/>
+        <TopLine Value="599"/>
         <CursorPos X="100" Y="179"/>
         <UsageCount Value="140"/>
         <Loaded Value="True"/>
@@ -120,6 +119,7 @@
         <Filename Value="gameobjects.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="GameObjects"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>

@@ -12,8 +12,8 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="75"/>
-        <CursorPos X="7" Y="75"/>
+        <TopLine Value="136"/>
+        <CursorPos X="7" Y="83"/>
         <UsageCount Value="213"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -241,36 +241,36 @@
     </General>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="masked_collision.pas"/>
-        <Caret Line="40" Column="1" TopLine="16"/>
-      </Position1>
-      <Position2>
-        <Filename Value="states.pas"/>
-        <Caret Line="119" Column="26" TopLine="115"/>
-      </Position2>
-      <Position3>
         <Filename Value="states.pas"/>
         <Caret Line="124" Column="32" TopLine="100"/>
+      </Position1>
+      <Position2>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="74" Column="51" TopLine="66"/>
+      </Position2>
+      <Position3>
+        <Filename Value="masked_collision.pas"/>
+        <Caret Line="39" Column="1" TopLine="16"/>
       </Position3>
       <Position4>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="74" Column="51" TopLine="66"/>
+        <Caret Line="74" Column="155" TopLine="66"/>
       </Position4>
       <Position5>
-        <Filename Value="masked_collision.pas"/>
-        <Caret Line="39" Column="1" TopLine="16"/>
-      </Position5>
-      <Position6>
-        <Filename Value="gameobjects.pas"/>
-        <Caret Line="74" Column="155" TopLine="66"/>
-      </Position6>
-      <Position7>
         <Filename Value="sprites.pas"/>
         <Caret Line="406" Column="1" TopLine="378"/>
-      </Position7>
-      <Position8>
+      </Position5>
+      <Position6>
         <Filename Value="masked_collision.pas"/>
         <Caret Line="35" Column="4" TopLine="16"/>
+      </Position6>
+      <Position7>
+        <Filename Value="masked_collision.pas"/>
+        <Caret Line="39" Column="1" TopLine="16"/>
+      </Position7>
+      <Position8>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="74" Column="1" TopLine="66"/>
       </Position8>
       <Position9>
         <Filename Value="masked_collision.pas"/>
@@ -282,83 +282,83 @@
       </Position10>
       <Position11>
         <Filename Value="masked_collision.pas"/>
-        <Caret Line="39" Column="1" TopLine="16"/>
+        <Caret Line="40" Column="1" TopLine="16"/>
       </Position11>
       <Position12>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="74" Column="1" TopLine="66"/>
+        <Caret Line="75" Column="25" TopLine="60"/>
       </Position12>
       <Position13>
-        <Filename Value="masked_collision.pas"/>
-        <Caret Line="40" Column="1" TopLine="16"/>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="70" Column="107" TopLine="53"/>
       </Position13>
       <Position14>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="75" Column="25" TopLine="60"/>
+        <Caret Line="75" Column="121" TopLine="58"/>
       </Position14>
       <Position15>
-        <Filename Value="gameobjects.pas"/>
-        <Caret Line="70" Column="107" TopLine="53"/>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="368" Column="17" TopLine="368"/>
       </Position15>
       <Position16>
-        <Filename Value="gameobjects.pas"/>
-        <Caret Line="75" Column="121" TopLine="58"/>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="404" Column="21" TopLine="387"/>
       </Position16>
       <Position17>
         <Filename Value="sprites.pas"/>
-        <Caret Line="368" Column="17" TopLine="368"/>
+        <Caret Line="407" Column="94" TopLine="387"/>
       </Position17>
       <Position18>
-        <Filename Value="sprites.pas"/>
-        <Caret Line="404" Column="21" TopLine="387"/>
+        <Filename Value="masked_collision.pas"/>
+        <Caret Line="40" Column="109" TopLine="16"/>
       </Position18>
       <Position19>
-        <Filename Value="sprites.pas"/>
-        <Caret Line="407" Column="94" TopLine="387"/>
+        <Filename Value="masked_collision.pas"/>
+        <Caret Line="39" Column="1" TopLine="16"/>
       </Position19>
       <Position20>
         <Filename Value="masked_collision.pas"/>
-        <Caret Line="40" Column="109" TopLine="16"/>
+        <Caret Line="45" Column="19" TopLine="16"/>
       </Position20>
       <Position21>
-        <Filename Value="masked_collision.pas"/>
-        <Caret Line="39" Column="1" TopLine="16"/>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="70" Column="120" TopLine="53"/>
       </Position21>
       <Position22>
-        <Filename Value="masked_collision.pas"/>
-        <Caret Line="45" Column="19" TopLine="16"/>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="166" Column="34" TopLine="161"/>
       </Position22>
       <Position23>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="70" Column="120" TopLine="53"/>
+        <Caret Line="75" Column="135" TopLine="58"/>
       </Position23>
       <Position24>
-        <Filename Value="gameobjects.pas"/>
-        <Caret Line="166" Column="34" TopLine="161"/>
-      </Position24>
-      <Position25>
-        <Filename Value="gameobjects.pas"/>
-        <Caret Line="75" Column="135" TopLine="58"/>
-      </Position25>
-      <Position26>
         <Filename Value="sprites.pas"/>
         <Caret Line="237" Column="3" TopLine="234"/>
-      </Position26>
-      <Position27>
+      </Position24>
+      <Position25>
         <Filename Value="sprites.pas"/>
         <Caret Line="378" Column="3" TopLine="371"/>
-      </Position27>
-      <Position28>
+      </Position25>
+      <Position26>
         <Filename Value="masked_collision.pas"/>
         <Caret Line="40" Column="124" TopLine="16"/>
-      </Position28>
-      <Position29>
+      </Position26>
+      <Position27>
         <Filename Value="masked_collision.pas"/>
         <Caret Line="34" Column="44" TopLine="16"/>
+      </Position27>
+      <Position28>
+        <Filename Value="alletest.lpr"/>
+        <Caret Line="188" Column="19" TopLine="163"/>
+      </Position28>
+      <Position29>
+        <Filename Value="alletest.lpr"/>
+        <Caret Line="21" Column="35" TopLine="15"/>
       </Position29>
       <Position30>
         <Filename Value="alletest.lpr"/>
-        <Caret Line="188" Column="19" TopLine="163"/>
+        <Caret Line="19" Column="45" TopLine="2"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
