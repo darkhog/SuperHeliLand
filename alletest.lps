@@ -57,7 +57,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="165"/>
         <CursorPos X="17" Y="56"/>
-        <UsageCount Value="185"/>
+        <UsageCount Value="186"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -68,7 +68,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="46"/>
         <CursorPos X="1" Y="65"/>
-        <UsageCount Value="183"/>
+        <UsageCount Value="184"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -79,7 +79,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="54" Y="10"/>
-        <UsageCount Value="181"/>
+        <UsageCount Value="182"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -90,7 +90,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="217"/>
         <CursorPos X="3" Y="221"/>
-        <UsageCount Value="179"/>
+        <UsageCount Value="180"/>
         <Loaded Value="True"/>
       </Unit7>
       <Unit8>
@@ -101,30 +101,30 @@
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
         <CursorPos X="14" Y="32"/>
-        <UsageCount Value="143"/>
+        <UsageCount Value="144"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>
         <Filename Value="states.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="States"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="599"/>
-        <CursorPos X="100" Y="179"/>
-        <UsageCount Value="140"/>
+        <TopLine Value="147"/>
+        <CursorPos X="87" Y="169"/>
+        <UsageCount Value="141"/>
         <Loaded Value="True"/>
       </Unit9>
       <Unit10>
         <Filename Value="gameobjects.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="GameObjects"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="73" Y="75"/>
-        <UsageCount Value="81"/>
+        <CursorPos X="4" Y="24"/>
+        <UsageCount Value="82"/>
         <Loaded Value="True"/>
       </Unit10>
       <Unit11>
@@ -135,7 +135,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="81" Y="6"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="78"/>
         <Loaded Value="True"/>
       </Unit11>
       <Unit12>

@@ -9,11 +9,10 @@
         <Filename Value="alletest.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="alletest"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="136"/>
-        <CursorPos X="7" Y="83"/>
+        <TopLine Value="127"/>
+        <CursorPos X="7" Y="141"/>
         <UsageCount Value="213"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -100,7 +99,7 @@
         <UnitName Value="Globals"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
+        <TopLine Value="58"/>
         <CursorPos X="14" Y="32"/>
         <UsageCount Value="143"/>
         <Loaded Value="True"/>
@@ -109,10 +108,11 @@
         <Filename Value="states.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="States"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="169"/>
-        <CursorPos X="100" Y="179"/>
+        <TopLine Value="147"/>
+        <CursorPos X="57" Y="169"/>
         <UsageCount Value="140"/>
         <Loaded Value="True"/>
       </Unit9>
@@ -123,7 +123,7 @@
         <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="73" Y="75"/>
+        <CursorPos X="4" Y="24"/>
         <UsageCount Value="81"/>
         <Loaded Value="True"/>
       </Unit10>
