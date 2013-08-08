@@ -146,28 +146,40 @@ begin
 end;
 
 procedure TDebugState.Update;
-var lastup,lastdown,lastleft,lastright:Boolean;
+
 begin
-  lastup:=false;
+ { lastup:=false;
   lastdown:=false;
   lastleft:=false;
-  lastright:=false;
+  lastright:=false;}
   Inc(DebugHUE);
   MarioGO.Update;
   OtherMarioGO.Update;
   if DebugHUE>=360 then DebugHUE:=0;
 
   //movement
-  if al_key[Options.binding_up]<>0 then begin MarioGO.y:=MarioGO.y-4; lastup:=true; end;
-  if al_key[Options.binding_down]<>0 then begin MarioGO.y:=MarioGO.y+4; lastdown:=true; end;
-  if al_key[Options.binding_left]<>0 then begin MarioGO.x:=MarioGO.x-4; lastleft:=true; end;
-  if al_key[Options.binding_right]<>0 then begin MarioGO.x:=MarioGO.x+4; lastright:=true; end;
+  if al_key[Options.binding_up]<>0 then begin
+    MarioGO.y:=MarioGO.y-4;
+    if MarioGO.isColliding(OtherMarioGO) then MarioGO.y:=MarioGO.y+4;
+  end;
+  if al_key[Options.binding_down]<>0 then begin
+    MarioGO.y:=MarioGO.y+4;
+    if MarioGO.isColliding(OtherMarioGO) then MarioGO.y:=MarioGO.y-4;
+  end;
+  if al_key[Options.binding_left]<>0 then begin
+    MarioGO.x:=MarioGO.x-4;
+    if MarioGO.isColliding(OtherMarioGO) then MarioGO.x:=MarioGO.x+4;
+  end;
+  if al_key[Options.binding_right]<>0 then begin
+    MarioGO.x:=MarioGO.x+4;
+    if MarioGO.isColliding(OtherMarioGO) then MarioGO.x:=MarioGO.x-4;
+  end;
 
   //reacting to collisions;
-  if ((MarioGO.isColliding(OtherMarioGO)) and (lastup)) then MarioGO.y:=MarioGO.y+8;
-  if ((MarioGO.isColliding(OtherMarioGO)) and (lastdown)) then MarioGO.y:=MarioGO.y-8;
+
+  {if ((MarioGO.isColliding(OtherMarioGO)) and (lastdown)) then MarioGO.y:=MarioGO.y-8;
   if ((MarioGO.isColliding(OtherMarioGO)) and (lastleft)) then MarioGO.x:=MarioGO.x+8;
-  if ((MarioGO.isColliding(OtherMarioGO)) and (lastright)) then MarioGO.x:=MarioGO.x-8;
+  if ((MarioGO.isColliding(OtherMarioGO)) and (lastright)) then MarioGO.x:=MarioGO.x-8;}
 
   //if ESC was pressed, return to main menu
   if al_key[AL_KEY_ESC]<>0 then CurrentState:=MainMenuState;

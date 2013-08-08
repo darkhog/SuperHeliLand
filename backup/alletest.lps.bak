@@ -57,7 +57,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="165"/>
         <CursorPos X="17" Y="56"/>
-        <UsageCount Value="186"/>
+        <UsageCount Value="192"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -68,7 +68,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="46"/>
         <CursorPos X="1" Y="65"/>
-        <UsageCount Value="184"/>
+        <UsageCount Value="190"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -79,7 +79,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="54" Y="10"/>
-        <UsageCount Value="182"/>
+        <UsageCount Value="188"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -90,7 +90,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="217"/>
         <CursorPos X="3" Y="221"/>
-        <UsageCount Value="180"/>
+        <UsageCount Value="186"/>
         <Loaded Value="True"/>
       </Unit7>
       <Unit8>
@@ -101,7 +101,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
         <CursorPos X="14" Y="32"/>
-        <UsageCount Value="144"/>
+        <UsageCount Value="150"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>
@@ -111,9 +111,9 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="147"/>
-        <CursorPos X="87" Y="169"/>
-        <UsageCount Value="141"/>
+        <TopLine Value="134"/>
+        <CursorPos X="21" Y="154"/>
+        <UsageCount Value="147"/>
         <Loaded Value="True"/>
       </Unit9>
       <Unit10>
@@ -124,7 +124,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="4" Y="24"/>
-        <UsageCount Value="82"/>
+        <UsageCount Value="88"/>
         <Loaded Value="True"/>
       </Unit10>
       <Unit11>
@@ -135,7 +135,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="81" Y="6"/>
-        <UsageCount Value="78"/>
+        <UsageCount Value="84"/>
         <Loaded Value="True"/>
       </Unit11>
       <Unit12>
@@ -144,7 +144,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="20"/>
       </Unit12>
       <Unit13>
         <Filename Value="C:\compilerstuff\allegro.pas\lib\allegro.pas"/>
@@ -152,7 +152,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="4712"/>
         <CursorPos X="56" Y="4743"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="30"/>
       </Unit13>
       <Unit14>
         <Filename Value="C:\compilerstuff\allegro.pas\lib\alvtable.pas"/>
@@ -160,14 +160,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="66"/>
         <CursorPos X="15" Y="81"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit14>
       <Unit15>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\inc\objpash.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="183"/>
         <CursorPos X="21" Y="201"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit15>
       <Unit16>
         <Filename Value="C:\compilerstuff\allegro.pas\lib\alfixed.pas"/>
@@ -175,7 +175,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="200"/>
         <CursorPos X="29" Y="217"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
       </Unit16>
       <Unit17>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\packages\fcl-base\src\contnrs.pp"/>
@@ -183,7 +183,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="55"/>
         <CursorPos X="14" Y="89"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit17>
       <Unit18>
         <Filename Value="..\simplecoder\mnfrm.pas"/>
@@ -191,49 +191,49 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit18>
       <Unit19>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\classes\classesh.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="270"/>
         <CursorPos X="15" Y="287"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit19>
       <Unit20>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\classes\lists.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="641"/>
         <CursorPos X="3" Y="646"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit20>
       <Unit21>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\sysutils\sysutilh.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="268"/>
         <CursorPos X="13" Y="285"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit21>
       <Unit22>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\inc\objpas.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="273"/>
         <CursorPos X="12" Y="276"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit22>
       <Unit23>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\inc\systemh.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="554"/>
         <CursorPos X="11" Y="571"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit23>
       <Unit24>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\inc\system.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="502"/>
         <CursorPos X="11" Y="519"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit24>
     </Units>
     <General>
@@ -241,124 +241,124 @@
     </General>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="states.pas"/>
-        <Caret Line="124" Column="32" TopLine="100"/>
-      </Position1>
-      <Position2>
         <Filename Value="gameobjects.pas"/>
         <Caret Line="74" Column="51" TopLine="66"/>
-      </Position2>
-      <Position3>
+      </Position1>
+      <Position2>
         <Filename Value="masked_collision.pas"/>
         <Caret Line="39" Column="1" TopLine="16"/>
-      </Position3>
-      <Position4>
+      </Position2>
+      <Position3>
         <Filename Value="gameobjects.pas"/>
         <Caret Line="74" Column="155" TopLine="66"/>
-      </Position4>
-      <Position5>
+      </Position3>
+      <Position4>
         <Filename Value="sprites.pas"/>
         <Caret Line="406" Column="1" TopLine="378"/>
+      </Position4>
+      <Position5>
+        <Filename Value="masked_collision.pas"/>
+        <Caret Line="35" Column="4" TopLine="16"/>
       </Position5>
       <Position6>
         <Filename Value="masked_collision.pas"/>
-        <Caret Line="35" Column="4" TopLine="16"/>
+        <Caret Line="39" Column="1" TopLine="16"/>
       </Position6>
       <Position7>
-        <Filename Value="masked_collision.pas"/>
-        <Caret Line="39" Column="1" TopLine="16"/>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="74" Column="1" TopLine="66"/>
       </Position7>
       <Position8>
-        <Filename Value="gameobjects.pas"/>
-        <Caret Line="74" Column="1" TopLine="66"/>
-      </Position8>
-      <Position9>
         <Filename Value="masked_collision.pas"/>
         <Caret Line="39" Column="1" TopLine="16"/>
-      </Position9>
-      <Position10>
+      </Position8>
+      <Position9>
         <Filename Value="gameobjects.pas"/>
         <Caret Line="74" Column="1" TopLine="66"/>
-      </Position10>
-      <Position11>
+      </Position9>
+      <Position10>
         <Filename Value="masked_collision.pas"/>
         <Caret Line="40" Column="1" TopLine="16"/>
+      </Position10>
+      <Position11>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="75" Column="25" TopLine="60"/>
       </Position11>
       <Position12>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="75" Column="25" TopLine="60"/>
+        <Caret Line="70" Column="107" TopLine="53"/>
       </Position12>
       <Position13>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="70" Column="107" TopLine="53"/>
+        <Caret Line="75" Column="121" TopLine="58"/>
       </Position13>
       <Position14>
-        <Filename Value="gameobjects.pas"/>
-        <Caret Line="75" Column="121" TopLine="58"/>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="368" Column="17" TopLine="368"/>
       </Position14>
       <Position15>
         <Filename Value="sprites.pas"/>
-        <Caret Line="368" Column="17" TopLine="368"/>
+        <Caret Line="404" Column="21" TopLine="387"/>
       </Position15>
       <Position16>
         <Filename Value="sprites.pas"/>
-        <Caret Line="404" Column="21" TopLine="387"/>
+        <Caret Line="407" Column="94" TopLine="387"/>
       </Position16>
       <Position17>
-        <Filename Value="sprites.pas"/>
-        <Caret Line="407" Column="94" TopLine="387"/>
+        <Filename Value="masked_collision.pas"/>
+        <Caret Line="40" Column="109" TopLine="16"/>
       </Position17>
       <Position18>
         <Filename Value="masked_collision.pas"/>
-        <Caret Line="40" Column="109" TopLine="16"/>
+        <Caret Line="39" Column="1" TopLine="16"/>
       </Position18>
       <Position19>
         <Filename Value="masked_collision.pas"/>
-        <Caret Line="39" Column="1" TopLine="16"/>
+        <Caret Line="45" Column="19" TopLine="16"/>
       </Position19>
       <Position20>
-        <Filename Value="masked_collision.pas"/>
-        <Caret Line="45" Column="19" TopLine="16"/>
+        <Filename Value="gameobjects.pas"/>
+        <Caret Line="70" Column="120" TopLine="53"/>
       </Position20>
       <Position21>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="70" Column="120" TopLine="53"/>
+        <Caret Line="166" Column="34" TopLine="161"/>
       </Position21>
       <Position22>
         <Filename Value="gameobjects.pas"/>
-        <Caret Line="166" Column="34" TopLine="161"/>
+        <Caret Line="75" Column="135" TopLine="58"/>
       </Position22>
       <Position23>
-        <Filename Value="gameobjects.pas"/>
-        <Caret Line="75" Column="135" TopLine="58"/>
+        <Filename Value="sprites.pas"/>
+        <Caret Line="237" Column="3" TopLine="234"/>
       </Position23>
       <Position24>
         <Filename Value="sprites.pas"/>
-        <Caret Line="237" Column="3" TopLine="234"/>
+        <Caret Line="378" Column="3" TopLine="371"/>
       </Position24>
       <Position25>
-        <Filename Value="sprites.pas"/>
-        <Caret Line="378" Column="3" TopLine="371"/>
+        <Filename Value="masked_collision.pas"/>
+        <Caret Line="40" Column="124" TopLine="16"/>
       </Position25>
       <Position26>
         <Filename Value="masked_collision.pas"/>
-        <Caret Line="40" Column="124" TopLine="16"/>
+        <Caret Line="34" Column="44" TopLine="16"/>
       </Position26>
       <Position27>
-        <Filename Value="masked_collision.pas"/>
-        <Caret Line="34" Column="44" TopLine="16"/>
+        <Filename Value="alletest.lpr"/>
+        <Caret Line="188" Column="19" TopLine="163"/>
       </Position27>
       <Position28>
         <Filename Value="alletest.lpr"/>
-        <Caret Line="188" Column="19" TopLine="163"/>
+        <Caret Line="21" Column="35" TopLine="15"/>
       </Position28>
       <Position29>
         <Filename Value="alletest.lpr"/>
-        <Caret Line="21" Column="35" TopLine="15"/>
+        <Caret Line="19" Column="45" TopLine="2"/>
       </Position29>
       <Position30>
-        <Filename Value="alletest.lpr"/>
-        <Caret Line="19" Column="45" TopLine="2"/>
+        <Filename Value="states.pas"/>
+        <Caret Line="175" Column="29" TopLine="158"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
