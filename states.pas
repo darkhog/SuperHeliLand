@@ -146,12 +146,14 @@ begin
 end;
 
 procedure TDebugState.Update;
-
+var oldx,oldy:Integer;
 begin
  { lastup:=false;
   lastdown:=false;
   lastleft:=false;
   lastright:=false;}
+  oldx:=MarioGO.x;
+  oldy:=MarioGO.y;
   Inc(DebugHUE);
   MarioGO.Update;
   OtherMarioGO.Update;
@@ -160,19 +162,19 @@ begin
   //movement
   if al_key[Options.binding_up]<>0 then begin
     MarioGO.y:=MarioGO.y-4;
-    if MarioGO.isColliding(OtherMarioGO) then MarioGO.y:=MarioGO.y+4;
+    if MarioGO.isColliding(OtherMarioGO) then MarioGO.y:=oldy;
   end;
   if al_key[Options.binding_down]<>0 then begin
     MarioGO.y:=MarioGO.y+4;
-    if MarioGO.isColliding(OtherMarioGO) then MarioGO.y:=MarioGO.y-4;
+    if MarioGO.isColliding(OtherMarioGO) then MarioGO.y:=oldy;
   end;
   if al_key[Options.binding_left]<>0 then begin
     MarioGO.x:=MarioGO.x-4;
-    if MarioGO.isColliding(OtherMarioGO) then MarioGO.x:=MarioGO.x+4;
+    if MarioGO.isColliding(OtherMarioGO) then MarioGO.x:=oldx;
   end;
   if al_key[Options.binding_right]<>0 then begin
     MarioGO.x:=MarioGO.x+4;
-    if MarioGO.isColliding(OtherMarioGO) then MarioGO.x:=MarioGO.x-4;
+    if MarioGO.isColliding(OtherMarioGO) then MarioGO.x:=oldx;
   end;
 
   //reacting to collisions;

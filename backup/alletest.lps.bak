@@ -9,6 +9,7 @@
         <Filename Value="alletest.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="alletest"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="127"/>
@@ -108,7 +109,6 @@
         <Filename Value="states.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="States"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="134"/>
